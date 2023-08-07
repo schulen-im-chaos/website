@@ -30,3 +30,10 @@ Wenn Du uns aus anderen Gründen kontaktieren möchtest, nutze bitte dazu das [K
 Bitte beachte, dass dies nur der Frontend-Code ist und einige Funktionen von unserem Backend und Datenbank bereitgestellt werden, die aktuell closed-source sind.
 
 ---
+
+## Contributors
+
+Huge thanks to everyone who takes part in the development:
+
+ - [Nico / FunKey54](https://github.com/FunKey54)
+ - [Linus / lynx197](https://github.com/lynx197)

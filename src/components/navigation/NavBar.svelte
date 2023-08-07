@@ -3,6 +3,7 @@
 
 	let showMenu = false;
 
+	// triggered by hamburger menu on mobile
 	function toggleNavbar() {
 		showMenu = !showMenu;
 	}
@@ -56,7 +57,7 @@
 		</div>
 
 		<!-- navigation items -->
-		<ul class="flex-col px-2 lg:flex lg:flex-row lg:items-center {showMenu ? 'flex' : 'hidden'}">
+		<ul class="flex-col p-2 lg:flex lg:flex-row lg:items-center {showMenu ? 'flex' : 'hidden'}">
 			<NavItem href="/help">Wie funktioniert's?</NavItem>
 		</ul>
 	</nav>
