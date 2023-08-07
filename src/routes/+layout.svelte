@@ -1,5 +1,6 @@
 <script>
 	import "../app.css";
+	import Footer from "../components/navigation/Footer.svelte";
 	import NavBar from "../components/navigation/NavBar.svelte";
 </script>
 
@@ -10,3 +11,5 @@
 >
 	<slot />
 </main>
+
+<Footer />
