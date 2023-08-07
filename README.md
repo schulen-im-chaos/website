@@ -1,38 +1,32 @@
-# create-svelte
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+# Schulen im Chaos Website
 
-## Creating a project
+---
 
-If you're seeing this, you've probably already done this step. Congrats!
+*English*
 
-```bash
-# create a new project in the current directory
-npm create svelte@latest
+This is the code for the website of the [Schulen im Chaos](https://schulenimchaos.de/) project.
 
-# create a new project in my-app
-npm create svelte@latest my-app
-```
+The website is only in German (at least for now), you can read about our aim [here](https://schulenimchaos.de/aim).
 
-## Developing
+This GitHub page is aimed only for developers, those who are interested in the source code of the website,
+want to submit technical information about bugs in the issues or contribute code via a pull request.
+If you want to contact us for other reasons, please do that using the [contact form](https://schulenimchaos.de/contact) on our website.
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+Please note that this is only the front-end code and some functionality is provided by our backend and database which are currently closed-sourced.
 
-```bash
-npm run dev
+---
 
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
+*Deutsch*
 
-## Building
+Dies ist der Code für die Webseite von [Schulen im Chaos](https://schulenimchaos.de/).
 
-To create a production version of your app:
+Du kannst dich [hier](https://schulenimchaos.de/aim) über unsere Ziele informieren.
 
-```bash
-npm run build
-```
+Das GitHub Repository ist gedacht nur für die Entwickler, Leute, die am Quellcode unserer Webseite interessiert sind,
+technische Informationen über Bugs in den Issues teilen oder den Projekt über einen Pull Request beitragen wollen.
+Wenn Du uns aus anderen Gründen kontaktieren möchtest, nutze bitte dazu das [Kontaktformular](https://schulenimchaos.de/contact) auf unserer Webseite.
 
-You can preview the production build with `npm run preview`.
+Bitte beachte, dass dies nur der Frontend-Code ist und einige Funktionen von unserem Backend und Datenbank bereitgestellt werden, die aktuell closed-source sind.
 
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+---
