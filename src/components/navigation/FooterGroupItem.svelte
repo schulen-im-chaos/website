@@ -3,7 +3,7 @@
 	export let target = undefined;
 </script>
 
-<li class="mb-4">
+<li class="mb-3">
 	<a {href} {target} class="hover:underline">
 		<slot />
 	</a>

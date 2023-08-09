@@ -1,3 +1,3 @@
-<p class="pb-2">
+<p class="pb-3">
 	<slot />
 </p>

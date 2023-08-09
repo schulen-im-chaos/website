@@ -6,7 +6,7 @@
 	import FooterSeparator from "./FooterSeparator.svelte";
 </script>
 
-<footer class="p-4 text-sm md:text-base">
+<footer class="p-4 text-sm">
 	<FooterSeparator />
 
 	<div class="md:flex">

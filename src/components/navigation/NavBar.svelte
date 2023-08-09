@@ -9,7 +9,7 @@
 	}
 </script>
 
-<div class="p-2 lg:py-4 bg-slate-200 dark:bg-slate-900 top-0 left-0 w-full sticky z-50">
+<div class="p-2 bg-slate-200 dark:bg-slate-900 top-0 left-0 w-full sticky z-50">
 	<nav class="container mx-auto w-full lg:flex lg:justify-between lg:items-center">
 		<!-- brand logo and hamburger menu -->
 		<div class="flex justify-between">
@@ -59,6 +59,7 @@
 		<!-- navigation items -->
 		<ul class="flex-col p-2 lg:flex lg:flex-row lg:items-center {showMenu ? 'flex' : 'hidden'}">
 			<NavItem href="/help">Wie funktioniert's?</NavItem>
+			<NavItem href="/materials">Lernmaterialien</NavItem>
 		</ul>
 	</nav>
 </div>
