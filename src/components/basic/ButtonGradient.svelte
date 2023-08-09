@@ -1,0 +1,16 @@
+<script>
+	export let href = undefined;
+	export let color = "blue";
+
+	let style = `text-center px-5 py-2 bg-gradient-to-r from-${color}-400 via-${color}-500 to-${color}-600 hover:bg-gradient-to-br rounded-lg`;
+</script>
+
+{#if href == undefined}
+	<button class={style}>
+		<slot />
+	</button>
+{:else}
+	<a {href} class={style}>
+		<slot />
+	</a>
+{/if}

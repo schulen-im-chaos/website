@@ -2,6 +2,12 @@
 export default {
 	content: ["./src/**/*.{html,js,svelte,ts}"],
 
+	safelist: [
+		{
+			pattern: /^(from|via|to)-.*-[456]00$/
+		}
+	],
+
 	theme: {
 		extend: {},
 		fontSize: {
