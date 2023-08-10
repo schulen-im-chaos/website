@@ -1,5 +1,5 @@
 <script>
-	import { page } from '$app/stores';
+	import { page } from "$app/stores";
 
 	export let href = undefined;
 	export let target = undefined;
@@ -13,7 +13,10 @@
 	<a
 		{href}
 		{target}
-		class="cursor-pointer text-gray-900 dark:text-gray-300 hover:text-black dark:hover:text-white {$page.url.pathname == href ? 'text-black dark:text-white' : ''}"
+		class="cursor-pointer text-gray-900 dark:text-gray-300 hover:text-black dark:hover:text-white {$page
+			.url.pathname == href
+			? 'text-black dark:text-white'
+			: ''}"
 	>
 		<slot />
 	</a>
