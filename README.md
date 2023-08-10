@@ -42,6 +42,6 @@ Huge thanks to everyone who takes part in the development:
 
 ## To Do's
 
- - [ ] Add all current routes -> add dropdown button component
+ - [ ] Add all current routes -> add dropdown button and input component
  - [ ] finish browse route -> filter, tags, searching
  - [ ] add github workflow for automatically deploying and running this website as a github page
