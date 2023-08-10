@@ -6,6 +6,7 @@
 	import Spinner from "../basic/Spinner.svelte";
 	import ButtonGradient from "../basic/ButtonGradient.svelte";
 	import HeadingSecondary from "../basic/HeadingSecondary.svelte";
+	import ParagraphDefault from "../basic/ParagraphDefault.svelte";
 
 	export let type = "grade";
 
@@ -25,12 +26,8 @@
 		: 'grid-cols-2 md:grid-cols-3 xlg:grid-cols-4'} justify-between gap-4 pb-4"
 >
 	{#await itemsPromise}
-		<!-- Loading Spinner -->
-		<div id="loading-spinner-{type}">
-			<Spinner color="gray" />
-		</div>
+		<Spinner color="gray" />
 	{:then items}
-		<!-- Display the items -->
 		{#if items && items.data}
 			{#each items.data as item}
 				<ButtonGradient
@@ -42,22 +39,18 @@
 					{type == "grade" ? item.number : item.name_de}
 				</ButtonGradient>
 			{:else}
-				<!-- No items found -->
-				<div id="no-items-{type}">No items found.</div>
+				<ParagraphDefault>No items found.</ParagraphDefault>
 			{/each}
 		{:else if items === null}
 			<!-- Data is null, that's expected because the DOM hasn't loaded yet -->
-			<div id="loading-spinner-{type}">
-				<Spinner color="gray" />
-			</div>
+			<Spinner color="gray" />
 		{:else}
-			<!-- Data structure is not as expected, this can/should be replaced with a spinner -->
-			<div id="unexpected-structure-{type}">Unexpected data structure received.</div>
+			<!-- Data structure is not as expected -->
+			<ParagraphDefault>Unexpected data structure received.</ParagraphDefault>
 		{/if}
 	{:catch error}
-		<!-- Error message -->
-		<div id="error-{type}">
-			{("Fehler: ", error.message)}
-		</div>
+		<ParagraphDefault>
+			Fehler: {error.message}
+		</ParagraphDefault>
 	{/await}
 </div>

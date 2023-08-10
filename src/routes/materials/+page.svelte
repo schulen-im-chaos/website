@@ -30,6 +30,8 @@
 	<Link href="/materials/contribute">hier lang</Link>!
 </ParagraphDefault>
 
+<!-- Todo: Add Search -->
+
 <div class="flex justify-between items-center">
 	<HeadingSecondary>Übersicht</HeadingSecondary>
 	<!--<div class="relative">
