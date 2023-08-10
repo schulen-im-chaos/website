@@ -5,7 +5,17 @@ export default {
 	safelist: [
 		{
 			pattern: /^(from|via|to)-.*-[456]00$/
-		}
+		},
+		{
+			pattern: /^bg-.*/
+		},
+		// only works like that
+		"hover:bg-blue-700",
+		'hover:bg-red-700',
+		'hover:bg-green-700',
+		{
+			pattern: /^list-.*/
+		},
 	],
 
 	theme: {
@@ -24,5 +34,5 @@ export default {
 
 	darkMode: "media",
 
-	plugins: []
+	plugins: [],
 };
