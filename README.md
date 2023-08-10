@@ -34,6 +34,14 @@ Bitte beachte, dass dies nur der Frontend-Code ist und einige Funktionen von uns
 ## Contributors
 
 Huge thanks to everyone who takes part in the development:
-
+ 
+ - [Alex / alexcoder04](https://github.com/alexcoder04)
+ - [Nils / nwrenger](https://github.com/nwrenger)
  - [Nico / FunKey54](https://github.com/FunKey54)
  - [Linus / lynx197](https://github.com/lynx197)
+
+## To Do's
+
+ - [ ] Add all current routes -> add dropdown button component
+ - [ ] finish browse route -> filter, tags, searching
+ - [ ] add github workflow for automatically deploying and running this website as a github page
