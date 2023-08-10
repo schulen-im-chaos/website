@@ -45,12 +45,14 @@
 				<!-- No items found -->
 				<div id="no-items-{type}">No items found.</div>
 			{/each}
-
-		{:else}
-		    <!-- Data structure is not as expected, this can/should be replaced with a spinner -->
-			<div id="unexpected-structure-{type}">
-				Unexpected data structure received.
+		{:else if items === null}
+			<!-- Data is null, that's expected because the DOM hasn't loaded yet -->
+			<div id="loading-spinner-{type}">
+				<Spinner color="gray" />
 			</div>
+		{:else}
+			<!-- Data structure is not as expected, this can/should be replaced with a spinner -->
+			<div id="unexpected-structure-{type}">Unexpected data structure received.</div>
 		{/if}
 	{:catch error}
 		<!-- Error message -->
