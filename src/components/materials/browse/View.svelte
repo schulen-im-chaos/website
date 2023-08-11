@@ -48,7 +48,6 @@
 		{#if !invalid}
 			<div class="grid grid-cols-1 lg:grid-cols-2 gap-4 w-full">
 				{#each items.data as item (item.id)}
-					<ParagraphDefault>Search: {search}</ParagraphDefault>
 					<ItemCard
 						href={item.link}
 						title={item.title}

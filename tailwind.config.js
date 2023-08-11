@@ -17,7 +17,7 @@ export default {
 		fontSize: {
 			tn: "12px",
 			sm: "16px",
-			base: "20px",
+			base: "18px",
 			medium: "20px",
 			lg: "24px",
 			xl: "28px",

@@ -40,7 +40,6 @@
 	<Dropdown
 		options={[
 			{ name: "Niedersachsen", value: "nds" },
-			{ name: "Nordrhein-Westfalen", value: "nrw" }
 		]}
 		bind:selectedOption={system}
 		id={"system"}

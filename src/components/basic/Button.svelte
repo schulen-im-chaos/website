@@ -4,7 +4,7 @@
 	export let onclick = () => {};
 	export let padding = "2";
 
-	let style = `text-sm md:text-base p-${padding} inline-flex items-center bg-${color}-600 hover:bg-${color}-700 rounded-lg hover-effect inline-flex items-center justify-center`;
+	let style = `md:text-base p-${padding} inline-flex items-center bg-${color}-600 hover:bg-${color}-700 rounded-lg hover-effect inline-flex items-center justify-center`;
 </script>
 
 {#if href == undefined}

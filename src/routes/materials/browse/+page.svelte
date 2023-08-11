@@ -28,7 +28,7 @@
 
 <Search />
 
-<div class="flex items-center gap-4 pb-4 pt-4">
+<div class="flex items-center gap-4 pb-4">
 	<HeadingSecondary>Filter:</HeadingSecondary>
 	<Filter type="subject" />
 	<Filter type="grade" />
