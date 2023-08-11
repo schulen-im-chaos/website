@@ -35,7 +35,12 @@
 
 <div class="flex justify-between items-center">
 	<HeadingSecondary>Übersicht</HeadingSecondary>
-	<Dropdown options={["Niedersachsen"]} selectedOption={"Niedersachsen"} id={"system"} />
+	<Dropdown
+		options={[{ name: "Niedersachsen", value: "nds" }]}
+		selectedOption={{ name: "Niedersachsen", value: "nds" }}
+		id={"system"}
+		color={undefined}
+	/>
 </div>
 
 <Overview type="grade" />

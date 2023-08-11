@@ -1,22 +1,26 @@
 <script>
 	import { onMount } from "svelte";
 
-	export let options = [];
+	export let options = [{}];
 	export let selectedOption = "";
-	export let selectedOptions = [];
+	export let selectedOptions = [{}];
 	export let label = "Select an option";
 	export let multiSelect = false;
 	export let id = "";
 	export let color;
 
-	export var fun = () => {};
+	export var fun = async () => {};
 
-	let temporarySelectedOptions = [];
+	let temporarySelectedOptions = [{}];
 	let isOpen = false;
 	let style;
 
-	if (color) {
+	$: if (selectedOptions) temporarySelectedOptions = selectedOptions;
+
+	$: if (color) {
 		style = `text-white bg-gradient-to-r from-${color}-400 via-${color}-500 to-${color}-600 hover:bg-gradient-to-br focus:ring-${color}-300 dark:focus:ring-${color}-800`;
+	} else {
+		style = "";
 	}
 
 	function toggleDropdown() {
@@ -25,8 +29,10 @@
 
 	function selectOption(option) {
 		if (multiSelect) {
-			if (temporarySelectedOptions.includes(option)) {
-				temporarySelectedOptions = temporarySelectedOptions.filter((item) => item !== option);
+			if (temporarySelectedOptions.map((obj) => obj.value).includes(option.value)) {
+				temporarySelectedOptions = temporarySelectedOptions.filter(
+					(item) => item.value !== option.value
+				);
 			} else {
 				temporarySelectedOptions = [...temporarySelectedOptions, option];
 			}
@@ -35,13 +41,14 @@
 		}
 	}
 
-	function applySelection() {
-        if (multiSelect) {
-            selectedOptions = temporarySelectedOptions;
-            selectedOption = selectedOptions.join(", ");
-        }
+	async function applySelection() {
+		if (multiSelect) {
+			selectedOptions = temporarySelectedOptions;
+			selectedOption.name = selectedOptions.map((obj) => obj.name).join(", ");
+		}
+		selectedOptions.sort();
 		isOpen = false;
-		fun();
+		await fun();
 	}
 
 	function resetSelection() {
@@ -53,7 +60,7 @@
 
 	// Close the dropdown when a click occurs outside of it
 	function handleClick(event) {
-		const isOutsideDropdown = !event.target.closest(".dropdown");
+		const isOutsideDropdown = !event.target.closest(`.dropdown-${id}`);
 		if (isOutsideDropdown) {
 			isOpen = false;
 		}
@@ -69,11 +76,11 @@
 
 	// Function to check if an option is selected
 	function isOptionSelected(option) {
-		return selectedOptions.includes(option);
+		return selectedOptions.map((obj) => obj.value).includes(option.value);
 	}
 </script>
 
-<div class="relative dropdown">
+<div class="relative dropdown-{id} inline-block">
 	<div class="p-0.5 rounded-lg {style}">
 		<button
 			class="text-center font-medium focus:ring-4 focus:outline-none px-3 py-2 rounded-lg inline-flex items-center justify-center w-full !border-0 !rounded-md bg-white !text-gray-900 dark:bg-gray-900 dark:!text-white hover:bg-transparent hover:!text-inherit transition-all duration-75 ease-in group-hover:!bg-opacity-0 group-hover:!text-inherit"
@@ -81,10 +88,10 @@
 		>
 			{multiSelect
 				? selectedOptions.length
-					? selectedOptions.join(", ")
+					? selectedOptions.map((obj) => obj.name).join(", ")
 					: label
-				: selectedOption
-				? selectedOption
+				: selectedOption.name
+				? selectedOption.name
 				: label}
 			<svg
 				class="w-4 h-4 ml-2"
@@ -109,13 +116,13 @@
 							type="button"
 							class="text-center focus:outline-none inline-flex items-center justify-center px-5 py-2.5 text-sm bg-primary-700 dark:bg-primary-600 focus:ring-primary-300 dark:focus:ring-primary-800 rounded-lg w-full text-red-700 dark:text-red-500 hover:bg-gray-100 dark:hover:bg-gray-600 disabled:text-gray-400"
 							on:click={resetSelection}
-							disabled={temporarySelectedOptions.length == 0 ?? false}>Zurücksetzen</button
+							disabled={selectedOptions.length == 0 ?? false}>Zurücksetzen</button
 						>
 					</div>
 				</div>
 			{/if}
-			<ul class="p-1 overflow-y-auto min-w-[150px] max-h-[200px]" {id}>
-				{#each options as option (option)}
+			<ul class="p-1 overflow-y-auto min-w-[200px] max-h-[200px]" {id}>
+				{#each options as option (option.value)}
 					<div class="p-1">
 						<li class="rounded hover:bg-gray-100 dark:hover:bg-gray-600">
 							{#if multiSelect}
@@ -125,8 +132,9 @@
 										class="mr-2 rounded bg-inherit"
 										on:click={() => selectOption(option)}
 										checked={isOptionSelected(option)}
+										bind:value={option.value}
 									/>
-									{option}
+									{option.name}
 								</label>
 							{:else}
 								<!-- svelte-ignore a11y-click-events-have-key-events -->
@@ -134,12 +142,12 @@
 								<!-- svelte-ignore a11y-label-has-associated-control -->
 								<label
 									class="flex items-center cursor-pointer p-2 min-w-[150px]"
-									on:click={() => {
+									on:click={async () => {
 										selectOption(option);
-										applySelection();
+										await applySelection();
 									}}
 								>
-									{option}
+									{option.name}
 								</label>
 							{/if}
 						</li>

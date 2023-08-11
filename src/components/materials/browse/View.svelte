@@ -2,11 +2,11 @@
 	import { getJson } from "$lib/api.js";
 	import Link from "../../basic/Link.svelte";
 
-	import { onMount } from "svelte";
 	import { page } from "$app/stores";
 	import ItemCard from "./ItemCard.svelte";
 	import Spinner from "../../basic/Spinner.svelte";
 	import ParagraphDefault from "../../basic/ParagraphDefault.svelte";
+	import { onMount } from "svelte";
 
 	let invalid = false;
 
@@ -15,20 +15,27 @@
 	}
 
 	let itemsPromise = null;
+	let subject = "";
+	let grade = "";
+	let mounted = false;
 
-	onMount(async () => {
-		if (getParam("subject") == "" && getParam("grade_number") == "") {
-			itemsPromise = { data: [] };
-			invalid = true;
-			return;
-		}
+	onMount(() => (mounted = true));
 
-		itemsPromise = await getJson(
-			`/v1/filter/item?system=${getParam("system")}&grade_number=${getParam(
-				"grade_number"
-			)}&subject=${getParam("subject")}`
+	$: grade = $page.url.searchParams.get("grade_number") || "";
+	$: subject = $page.url.searchParams.get("subject") || "";
+	$: if (
+		$page.url.searchParams.get("subject") == "" &&
+		$page.url.searchParams.get("grade_number") == ""
+	) {
+		itemsPromise = { data: [] };
+		invalid = true;
+	} else {
+		invalid = false;
+	}
+	$: if (mounted && !invalid && (grade || subject))
+		itemsPromise = getJson(
+			`/v1/filter/item?system=${getParam("system")}&grade_number=${grade}&subject=${subject}`
 		);
-	});
 </script>
 
 {#await itemsPromise}
@@ -38,8 +45,8 @@
 {:then items}
 	{#if items && items.data}
 		{#if !invalid}
-			{#each items.data as item (item.id)}
-				<div class="grid grid-cols-1 lg:grid-cols-2 gap-4 w-full">
+			<div class="grid grid-cols-1 lg:grid-cols-2 gap-4 w-full">
+				{#each items.data as item (item.id)}
 					<ItemCard
 						href={item.link}
 						title={item.title}
@@ -49,18 +56,15 @@
 					>
 						{item.summary}
 					</ItemCard>
-				</div>
-			{:else}
-				<ParagraphDefault>
-					Es gibt leider im Moment noch keine Materialien in dieser Kategorie :(
-				</ParagraphDefault>
-
-				<ParagraphDefault>
-					Das kannst du ändern, indem du eigene Materialien an uns <Link
-						href="/materials/contribute">schickst</Link
-					> :)
-				</ParagraphDefault>
-			{/each}
+				{:else}
+					<ParagraphDefault>
+						Es gibt leider im Moment noch keine Materialien in dieser Kategorie :( <br />
+						Das kannst du ändern, indem du eigene Materialien an uns <Link
+							href="/materials/contribute">schickst</Link
+						> :)
+					</ParagraphDefault>
+				{/each}
+			</div>
 		{:else}
 			<ParagraphDefault>
 				Du hast weder Klassenstufe noch Fach angegeben. Bitte ändere deine Angabe und versuche es
