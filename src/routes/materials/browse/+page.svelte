@@ -24,12 +24,7 @@
 	Übersicht
 </Button>
 
-<!-- Todo: Add Search -->
-
-<div class="flex items-center gap-4">
-	<HeadingSecondary>Tags:</HeadingSecondary>
-	<div>Tags kommen bald :)</div>
-</div>
+<!-- Todo: Add Search - Search is also searching over tags -->
 
 <div class="flex items-center gap-4">
 	<HeadingSecondary>Filter:</HeadingSecondary>

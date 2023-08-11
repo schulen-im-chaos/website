@@ -2,7 +2,7 @@
 	export let href = undefined;
 	export let color = "blue";
 
-	let style = `text-sm md:text-base p-2 inline-flex items-center bg-${color}-600 hover:bg-${color}-700 rounded-lg hover-effect`;
+	let style = `text-sm md:text-base p-2 inline-flex items-center bg-${color}-600 hover:bg-${color}-700 rounded-lg hover-effect inline-flex items-center justify-center`;
 </script>
 
 {#if href == undefined}
