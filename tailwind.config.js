@@ -8,8 +8,8 @@ export default {
 		},
 		{
 			pattern: /^bg-.*-[67]00$/,
-			variants: ['hover'],
-		},
+			variants: ["hover"]
+		}
 	],
 
 	theme: {
@@ -28,5 +28,5 @@ export default {
 
 	darkMode: "media",
 
-	plugins: [],
+	plugins: []
 };

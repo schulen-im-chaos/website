@@ -3,6 +3,9 @@
 	import View from "../../../components/materials/browse/View.svelte";
 	import HeadingSecondary from "../../../components/basic/HeadingSecondary.svelte";
 	import Button from "../../../components/basic/Button.svelte";
+	import Dropdown from "../../../components/basic/Dropdown.svelte";
+
+	let selectedOptions = [];
 </script>
 
 <svelte:head>
@@ -26,9 +29,17 @@
 
 <!-- Todo: Add Search - Search is also searching over tags -->
 
-<div class="flex items-center gap-4">
+<div class="flex items-center gap-4 pb-4 pt-4">
 	<HeadingSecondary>Filter:</HeadingSecondary>
-	<div>Filter kommen bald :)</div>
+	<Dropdown
+		bind:selectedOptions
+		options={["1", "2", "3", "4", "5", "6", "7", "8", "9937459738475873485738475"]}
+		selectedOption={"Apple"}
+		multiSelect={true}
+		fun={() => console.log(selectedOptions)}
+		id={"filer"}
+		label={"Alle Fächer"}
+	/>
 </div>
 
 <View />

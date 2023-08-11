@@ -4,6 +4,7 @@
 	import ParagraphDefault from "../../components/basic/ParagraphDefault.svelte";
 	import Overview from "../../components/materials/Overview.svelte";
 	import HeadingSecondary from "../../components/basic/HeadingSecondary.svelte";
+	import Dropdown from "../../components/basic/Dropdown.svelte";
 </script>
 
 <svelte:head>
@@ -34,12 +35,7 @@
 
 <div class="flex justify-between items-center">
 	<HeadingSecondary>Übersicht</HeadingSecondary>
-	<!--<div class="relative">
-		<Button class="text-slate-950 dark:text-slate-100"><Chevron>Niedersachsen</Chevron></Button>
-		<Dropdown>
-			<DropdownItem>Niedersachsen</DropdownItem>
-		</Dropdown>
-	</div>-->
+	<Dropdown options={["Niedersachsen"]} selectedOption={"Niedersachsen"} id={"system"} />
 </div>
 
 <Overview type="grade" />
