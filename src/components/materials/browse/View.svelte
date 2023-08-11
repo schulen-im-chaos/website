@@ -1,6 +1,7 @@
 <script>
 	import { getJson } from "$lib/api.js";
 	import Link from "../../basic/Link.svelte";
+	import { base } from "$app/paths";
 
 	import { page } from "$app/stores";
 	import ItemCard from "./ItemCard.svelte";
@@ -61,7 +62,7 @@
 					<ParagraphDefault>
 						Es gibt leider im Moment noch keine Materialien in dieser Kategorie :( <br />
 						Das kannst du ändern, indem du eigene Materialien an uns <Link
-							href="/materials/contribute">schickst</Link
+							href="{base}/materials/contribute">schickst</Link
 						> :)
 					</ParagraphDefault>
 				{/each}

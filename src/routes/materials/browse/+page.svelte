@@ -1,4 +1,5 @@
 <script>
+	import { base } from "$app/paths";
 	import HeadingMain from "../../../components/basic/HeadingMain.svelte";
 	import View from "../../../components/materials/browse/View.svelte";
 	import HeadingSecondary from "../../../components/basic/HeadingSecondary.svelte";

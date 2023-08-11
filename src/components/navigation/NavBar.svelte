@@ -1,4 +1,5 @@
 <script>
+	import { base } from "$app/paths";
 	import Button from "../basic/Button.svelte";
 	import NavDropdown from "./NavDropdown.svelte";
 	import NavItem from "./NavItem.svelte";
@@ -16,7 +17,7 @@
 		<!-- brand logo and hamburger menu -->
 		<div class="flex justify-between">
 			<!-- brand logo -->
-			<a href="/" class="flex items-center">
+			<a href="{base}/" class="flex items-center">
 				<img src="/favicon.png" class="mx-3 h-7 sm:h-9 lg:h-11" alt="Schulen im Chaos Logo" />
 				<span class="self-center whitespace-nowrap text-base sm:text-lg font-semibold">
 					Schulen im Chaos
@@ -60,13 +61,13 @@
 
 		<!-- navigation items -->
 		<ul class="flex-col p-2 lg:flex lg:flex-row lg:items-center {showMenu ? 'flex' : 'hidden'}">
-			<NavItem href="/help">Wie funktioniert's?</NavItem>
-			<NavItem href="/materials">Lernmaterialien</NavItem>
+			<NavItem href="{base}/help">Wie funktioniert's?</NavItem>
+			<NavItem href="{base}/materials">Lernmaterialien</NavItem>
 			<NavDropdown id={"about"} text="Über uns">
-				<NavItem href="/aim">Unser Ziel</NavItem>
-				<NavItem href="/team">Unser Team</NavItem>
+				<NavItem href="{base}/aim">Unser Ziel</NavItem>
+				<NavItem href="{base}/team">Unser Team</NavItem>
 			</NavDropdown>
-			<NavItem href="/contact">Kontakt</NavItem>
+			<NavItem href="{base}/contact">Kontakt</NavItem>
 			<Button
 				href="https://discord.com/invite/nWd8yZ4HWY"
 				target="_blank"

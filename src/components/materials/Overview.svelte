@@ -1,6 +1,6 @@
 <script>
 	import { onMount } from "svelte";
-
+	import { base } from "$app/paths";
 	import { getJson } from "$lib/api";
 
 	import Spinner from "../basic/Spinner.svelte";

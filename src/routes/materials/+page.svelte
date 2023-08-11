@@ -1,4 +1,5 @@
 <script>
+	import { base } from "$app/paths";
 	import Link from "../../components/basic/Link.svelte";
 	import HeadingMain from "../../components/basic/HeadingMain.svelte";
 	import ParagraphDefault from "../../components/basic/ParagraphDefault.svelte";
@@ -30,7 +31,7 @@
 
 <ParagraphDefault>
 	Hast Du eigene Lernzettel, die du mit anderen teilen willst? Dann geht's
-	<Link href="/materials/contribute">hier lang</Link>!
+	<Link href="{base}/materials/contribute">hier lang</Link>!
 </ParagraphDefault>
 
 <!-- Todo: Add Search -->

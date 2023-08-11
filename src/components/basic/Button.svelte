@@ -1,4 +1,6 @@
 <script>
+	import { base } from "$app/paths";
+
 	export let href = undefined;
 	export let color = "blue";
 	export let type = "button";
@@ -15,7 +17,7 @@
 		<slot />
 	</button>
 {:else}
-	<a {href} class={style} {target}>
+	<a href="{base}{href}" class={style} {target}>
 		<slot />
 	</a>
 {/if}

@@ -2,6 +2,7 @@
 	import { page } from "$app/stores";
 	import { onMount } from "svelte";
 	import { goto } from "$app/navigation";
+	import { base } from "$app/paths";
 
 	import { getJson } from "../../../lib/api.js";
 	import Dropdown from "../../basic/Dropdown.svelte";
@@ -27,14 +28,14 @@
 	async function apply() {
 		if (type == "grade") {
 			goto(
-				`/materials/browse?system=${getParam("system")}&grade_number=${selected
+				`${base}/materials/browse?system=${getParam("system")}&grade_number=${selected
 					.map((obj) => obj.value)
 					.join(",")}&subject=${getParam("subject")}`,
 				{ replaceState: true }
 			);
 		} else {
 			goto(
-				`/materials/browse?system=${getParam("system")}&grade_number=${getParam(
+				`${base}/materials/browse?system=${getParam("system")}&grade_number=${getParam(
 					"grade_number"
 				)}&subject=${selected.map((obj) => obj.value).join(",")}`,
 				{ replaceState: true }

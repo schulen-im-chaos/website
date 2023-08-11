@@ -1,4 +1,5 @@
 <script>
+	import { base } from "$app/paths";
 	import { DISCORD_LINK, INSTAGRAM_LINK, GITHUB_LINK } from "../../globals";
 	import FooterCopyright from "./FooterCopyright.svelte";
 	import FooterGroup from "./FooterGroup.svelte";
@@ -13,10 +14,10 @@
 		<div class="grid grid-cols-1 gap-6 md:gap-20 sm:grid-cols-3 ml-2 sm:ml-10 lg:ml-20">
 			<!-- general -->
 			<FooterGroup title="Schulen im Chaos">
-				<FooterGroupItem href="/aim">Unser Ziel</FooterGroupItem>
-				<FooterGroupItem href="/team">Unser Team</FooterGroupItem>
-				<FooterGroupItem href="/help">Wie funktioniert's?</FooterGroupItem>
-				<FooterGroupItem href="/contact">Kontakt</FooterGroupItem>
+				<FooterGroupItem href="{base}/aim">Unser Ziel</FooterGroupItem>
+				<FooterGroupItem href="{base}/team">Unser Team</FooterGroupItem>
+				<FooterGroupItem href="{base}/help">Wie funktioniert's?</FooterGroupItem>
+				<FooterGroupItem href="{base}/contact">Kontakt</FooterGroupItem>
 			</FooterGroup>
 
 			<!-- social media with corresponding icons -->
@@ -64,8 +65,8 @@
 
 			<!-- legal -->
 			<FooterGroup title="Informationen">
-				<FooterGroupItem href="/legal/imprint">Impressum</FooterGroupItem>
-				<FooterGroupItem href="/legal/data-protection">Datenschutzerklärung</FooterGroupItem>
+				<FooterGroupItem href="{base}/legal/imprint">Impressum</FooterGroupItem>
+				<FooterGroupItem href="{base}/legal/data-protection">Datenschutzerklärung</FooterGroupItem>
 			</FooterGroup>
 		</div>
 	</div>
