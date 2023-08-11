@@ -13,7 +13,7 @@
 	<a
 		{href}
 		{target}
-		class="cursor-pointer text-gray-900 dark:text-gray-300 hover:text-black dark:hover:text-white {$page
+		class="cursor-pointer text-gray-900 dark:text-gray-400 hover:text-black dark:hover:text-white {$page
 			.url.pathname == href
 			? 'text-black dark:text-white'
 			: ''}"

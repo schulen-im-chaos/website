@@ -38,9 +38,7 @@
 <div class="flex justify-between items-center">
 	<HeadingSecondary>Übersicht</HeadingSecondary>
 	<Dropdown
-		options={[
-			{ name: "Niedersachsen", value: "nds" },
-		]}
+		options={[{ name: "Niedersachsen", value: "nds" }]}
 		bind:selectedOption={system}
 		id={"system"}
 		color={undefined}
