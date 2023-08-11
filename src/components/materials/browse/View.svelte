@@ -80,7 +80,7 @@
 		</div>
 	{:else}
 		<!-- Data structure is not as expected -->
-		<ParagraphDefault>Unexpected data structure received.</ParagraphDefault>
+		<ParagraphDefault>Unerwartete Datenstruktur erhalten.</ParagraphDefault>
 	{/if}
 {:catch error}
 	<ParagraphDefault>

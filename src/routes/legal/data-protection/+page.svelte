@@ -243,7 +243,7 @@
 	Verarbeitung besteht in folgenden Fällen:
 </LongParagraph>
 <br />
-<ol class="list-disc ml-6 pb-4">
+<ol class="list-decimal ml-6 pb-4">
 	<li>
 		Wenn die Verarbeitung Ihrer personenbezogenen Daten unrechtmäßig geschah/geschieht, können Sie
 		statt der Löschung die Einschränkung der Datenverarbeitung verlangen.

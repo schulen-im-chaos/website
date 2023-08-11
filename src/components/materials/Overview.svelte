@@ -1,6 +1,5 @@
 <script>
 	import { onMount } from "svelte";
-	import { base } from "$app/paths";
 	import { getJson } from "$lib/api";
 
 	import Spinner from "../basic/Spinner.svelte";
@@ -40,14 +39,14 @@
 					{type == "grade" ? item.number : item.name_de}
 				</ButtonGradient>
 			{:else}
-				<ParagraphDefault>No items found.</ParagraphDefault>
+				<ParagraphDefault>Keine Einträge gefunden.</ParagraphDefault>
 			{/each}
 		{:else if items === null}
 			<!-- Data is null, that's expected because the DOM hasn't loaded yet -->
 			<Spinner color="gray" />
 		{:else}
 			<!-- Data structure is not as expected -->
-			<ParagraphDefault>Unexpected data structure received.</ParagraphDefault>
+			<ParagraphDefault>Unerwartete Datenstruktur erhalten.</ParagraphDefault>
 		{/if}
 	{:catch error}
 		<ParagraphDefault>
