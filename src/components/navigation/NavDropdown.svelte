@@ -61,7 +61,13 @@
 			tabindex="-1"
 			class="bg-white dark:bg-gray-700 text-gray-700 dark:text-gray-200 rounded-lg border-gray-100 dark:border-gray-700 shadow-md outline-none divide-y divide-gray-100 dark:divide-gray-600 absolute z-20 min-w-[150px]"
 		>
-			<ul>
+			<!-- svelte-ignore a11y-click-events-have-key-events -->
+			<!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
+			<ul
+				on:click={() => {
+					if (window.innerWidth <= 768) isOpen = false;
+				}}
+			>
 				<slot />
 			</ul>
 		</div>

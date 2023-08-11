@@ -1,7 +1,7 @@
 <script>
 	import Button from "../basic/Button.svelte";
 	import NavDropdown from "./NavDropdown.svelte";
-import NavItem from "./NavItem.svelte";
+	import NavItem from "./NavItem.svelte";
 
 	let showMenu = false;
 
@@ -67,7 +67,12 @@ import NavItem from "./NavItem.svelte";
 				<NavItem href="/team">Unser Team</NavItem>
 			</NavDropdown>
 			<NavItem href="/contact">Kontakt</NavItem>
-			<Button  href="https://discord.com/invite/nWd8yZ4HWY" target='_blank' color="emerald" extra={showMenu ? "w-full mr-3 ml-3 mt-3" : "mr-3 ml-3"}>Zum Discord-Server!</Button>
+			<Button
+				href="https://discord.com/invite/nWd8yZ4HWY"
+				target="_blank"
+				color="emerald"
+				extra={showMenu ? "w-full mr-3 ml-3 mt-3" : "mr-3 ml-3"}>Zum Discord-Server!</Button
+			>
 		</ul>
 	</nav>
 </div>
