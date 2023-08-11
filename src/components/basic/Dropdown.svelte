@@ -15,6 +15,8 @@
 	let isOpen = false;
 	let style;
 
+	$: options.sort((a, b) => a.name.localeCompare(b.name));
+
 	$: if (selectedOptions) temporarySelectedOptions = selectedOptions;
 
 	$: if (color) {
@@ -25,6 +27,7 @@
 
 	function toggleDropdown() {
 		isOpen = !isOpen;
+		temporarySelectedOptions = selectedOptions;
 	}
 
 	function selectOption(option) {
@@ -45,8 +48,8 @@
 		if (multiSelect) {
 			selectedOptions = temporarySelectedOptions;
 			selectedOption.name = selectedOptions.map((obj) => obj.name).join(", ");
+			selectedOptions.sort((a, b) => a.name.localeCompare(b.name));
 		}
-		selectedOptions.sort();
 		isOpen = false;
 		await fun();
 	}
@@ -63,6 +66,7 @@
 		const isOutsideDropdown = !event.target.closest(`.dropdown-${id}`);
 		if (isOutsideDropdown) {
 			isOpen = false;
+			temporarySelectedOptions = selectedOptions;
 		}
 	}
 
@@ -83,7 +87,7 @@
 <div class="relative dropdown-{id} inline-block">
 	<div class="p-0.5 rounded-lg {style}">
 		<button
-			class="text-center font-medium focus:ring-4 focus:outline-none px-3 py-2 rounded-lg inline-flex items-center justify-center w-full !border-0 !rounded-md bg-white !text-gray-900 dark:bg-gray-900 dark:!text-white hover:bg-transparent hover:!text-inherit transition-all duration-75 ease-in group-hover:!bg-opacity-0 group-hover:!text-inherit"
+			class="text-center focus:ring-4 focus:outline-none px-3 py-2 rounded-lg inline-flex items-center justify-center w-full !border-0 !rounded-md bg-white !text-gray-900 dark:bg-gray-900 dark:!text-white hover:bg-transparent hover:!text-inherit transition-all duration-75 ease-in group-hover:!bg-opacity-0 group-hover:!text-inherit"
 			on:click={toggleDropdown}
 		>
 			{multiSelect
@@ -116,7 +120,7 @@
 							type="button"
 							class="text-center focus:outline-none inline-flex items-center justify-center px-5 py-2.5 text-sm bg-primary-700 dark:bg-primary-600 focus:ring-primary-300 dark:focus:ring-primary-800 rounded-lg w-full text-red-700 dark:text-red-500 hover:bg-gray-100 dark:hover:bg-gray-600 disabled:text-gray-400"
 							on:click={resetSelection}
-							disabled={selectedOptions.length == 0 ?? false}>Zurücksetzen</button
+							disabled={temporarySelectedOptions.length == 0 ?? false}>Zurücksetzen</button
 						>
 					</div>
 				</div>

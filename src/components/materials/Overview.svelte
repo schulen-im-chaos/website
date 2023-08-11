@@ -9,6 +9,7 @@
 	import ParagraphDefault from "../basic/ParagraphDefault.svelte";
 
 	export let type = "grade";
+	export let system = '';
 
 	let itemsPromise = null;
 	onMount(() => {
@@ -33,7 +34,7 @@
 				<ButtonGradient
 					href="/materials/browse?{type == 'grade'
 						? `grade_number=${item.number}`
-						: `subject=${item.name}`}&system=nds"
+						: `subject=${item.name}`}&system={system}"
 					color={item.color}
 				>
 					{type == "grade" ? item.number : item.name_de}

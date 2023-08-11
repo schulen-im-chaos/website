@@ -23,19 +23,18 @@
 
 	$: grade = $page.url.searchParams.get("grade_number") || "";
 	$: subject = $page.url.searchParams.get("subject") || "";
-	$: if (
-		$page.url.searchParams.get("subject") == "" &&
-		$page.url.searchParams.get("grade_number") == ""
-	) {
+	$: search = $page.url.searchParams.get("search") || "";
+	$: if (grade == "" && subject == "" && search == "") {
 		itemsPromise = { data: [] };
 		invalid = true;
 	} else {
 		invalid = false;
 	}
-	$: if (mounted && !invalid && (grade || subject))
+	$: if (mounted && !invalid && (grade || subject || search)) {
 		itemsPromise = getJson(
-			`/v1/filter/item?system=${getParam("system")}&grade_number=${grade}&subject=${subject}`
+			`/v1/filter/item?system=${getParam("system")}&grade_number=${grade}&subject=${subject}&search=${search}`
 		);
+	}
 </script>
 
 {#await itemsPromise}
@@ -47,6 +46,7 @@
 		{#if !invalid}
 			<div class="grid grid-cols-1 lg:grid-cols-2 gap-4 w-full">
 				{#each items.data as item (item.id)}
+				<ParagraphDefault>Search: {search}</ParagraphDefault>
 					<ItemCard
 						href={item.link}
 						title={item.title}
@@ -67,7 +67,7 @@
 			</div>
 		{:else}
 			<ParagraphDefault>
-				Du hast weder Klassenstufe noch Fach angegeben. Bitte ändere deine Angabe und versuche es
+				Du hast weder Klassenstufe, Fach oder einen Suchbegriff angegeben. Bitte ändere deine Angabe und versuche es
 				erneut.
 			</ParagraphDefault>
 		{/if}

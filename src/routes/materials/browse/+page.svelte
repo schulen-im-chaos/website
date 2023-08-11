@@ -4,6 +4,7 @@
 	import HeadingSecondary from "../../../components/basic/HeadingSecondary.svelte";
 	import Button from "../../../components/basic/Button.svelte";
 	import Filter from "../../../components/materials/browse/Filter.svelte";
+	import Search from "../../../components/materials/Search.svelte";
 </script>
 
 <svelte:head>
@@ -25,7 +26,7 @@
 	Übersicht
 </Button>
 
-<!-- Todo: Add Search - Search is also searching over tags -->
+<Search />
 
 <div class="flex items-center gap-4 pb-4 pt-4">
 	<HeadingSecondary>Filter:</HeadingSecondary>
