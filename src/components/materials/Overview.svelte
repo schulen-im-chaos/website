@@ -9,7 +9,7 @@
 	import ParagraphDefault from "../basic/ParagraphDefault.svelte";
 
 	export let type = "grade";
-	export let system = '';
+	export let system = "";
 
 	let itemsPromise = null;
 	onMount(() => {

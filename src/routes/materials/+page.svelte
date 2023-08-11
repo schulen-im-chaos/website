@@ -38,15 +38,18 @@
 <div class="flex justify-between items-center">
 	<HeadingSecondary>Übersicht</HeadingSecondary>
 	<Dropdown
-		options={[{ name: "Niedersachsen", value: "nds" }, { name: "Nordrhein-Westfalen", value: "nrw" }]}
+		options={[
+			{ name: "Niedersachsen", value: "nds" },
+			{ name: "Nordrhein-Westfalen", value: "nrw" }
+		]}
 		bind:selectedOption={system}
 		id={"system"}
 		color={undefined}
 	/>
 </div>
 
-<Search system={system ? system.value : ''} />
+<Search system={system ? system.value : ""} />
 
-<Overview system={system ? system.value : ''}  type="grade" />
+<Overview system={system ? system.value : ""} type="grade" />
 
-<Overview system={system ? system.value : ''}  type="subject" />
+<Overview system={system ? system.value : ""} type="subject" />

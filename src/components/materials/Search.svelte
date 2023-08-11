@@ -5,7 +5,7 @@
 	import Input from "../basic/Input.svelte";
 	import Button from "../basic/Button.svelte";
 
-    export let system = '';
+	export let system = "";
 
 	let search = "";
 

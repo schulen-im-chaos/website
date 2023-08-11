@@ -32,7 +32,9 @@
 	}
 	$: if (mounted && !invalid && (grade || subject || search)) {
 		itemsPromise = getJson(
-			`/v1/filter/item?system=${getParam("system")}&grade_number=${grade}&subject=${subject}&search=${search}`
+			`/v1/filter/item?system=${getParam(
+				"system"
+			)}&grade_number=${grade}&subject=${subject}&search=${search}`
 		);
 	}
 </script>
@@ -46,7 +48,7 @@
 		{#if !invalid}
 			<div class="grid grid-cols-1 lg:grid-cols-2 gap-4 w-full">
 				{#each items.data as item (item.id)}
-				<ParagraphDefault>Search: {search}</ParagraphDefault>
+					<ParagraphDefault>Search: {search}</ParagraphDefault>
 					<ItemCard
 						href={item.link}
 						title={item.title}
@@ -67,8 +69,8 @@
 			</div>
 		{:else}
 			<ParagraphDefault>
-				Du hast weder Klassenstufe, Fach oder einen Suchbegriff angegeben. Bitte ändere deine Angabe und versuche es
-				erneut.
+				Du hast weder Klassenstufe, Fach oder einen Suchbegriff angegeben. Bitte ändere deine Angabe
+				und versuche es erneut.
 			</ParagraphDefault>
 		{/if}
 	{:else if items === null}
