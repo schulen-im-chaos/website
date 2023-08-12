@@ -5,6 +5,10 @@ export default {
 	safelist: [
 		{
 			pattern: /^(from|via|to)-.*-[456]00$/
+		},
+		{
+			pattern: /^bg-.*-[67]00$/,
+			variants: ["hover"]
 		}
 	],
 
@@ -13,8 +17,8 @@ export default {
 		fontSize: {
 			tn: "12px",
 			sm: "16px",
-			base: "20px",
-			medium: "20px",
+			base: "18px",
+			medium: "18px",
 			lg: "24px",
 			xl: "28px",
 			"2xl": "30px",

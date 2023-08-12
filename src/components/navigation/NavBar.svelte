@@ -1,5 +1,8 @@
 <script>
+	import Button from "../basic/Button.svelte";
+	import NavDropdown from "./NavDropdown.svelte";
 	import NavItem from "./NavItem.svelte";
+	import { DISCORD_LINK } from "../../globals";
 
 	let showMenu = false;
 
@@ -60,6 +63,19 @@
 		<ul class="flex-col p-2 lg:flex lg:flex-row lg:items-center {showMenu ? 'flex' : 'hidden'}">
 			<NavItem href="/help">Wie funktioniert's?</NavItem>
 			<NavItem href="/materials">Lernmaterialien</NavItem>
+			<NavDropdown id={"about"} text="Über uns">
+				<NavItem href="/aim">Unser Ziel</NavItem>
+				<NavItem href="/team">Unser Team</NavItem>
+			</NavDropdown>
+			<NavItem href="/contact">Kontakt</NavItem>
+			<div class="pt-1" />
+			<Button
+				href={DISCORD_LINK}
+				target="_blank"
+				color="emerald"
+				external
+				extra={showMenu ? "w-full mr-3 ml-3 mt-3" : "mr-3 ml-3"}>Zum Discord-Server!</Button
+			>
 		</ul>
 	</nav>
 </div>

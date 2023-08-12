@@ -4,6 +4,9 @@
 	import ParagraphDefault from "../../components/basic/ParagraphDefault.svelte";
 	import Overview from "../../components/materials/Overview.svelte";
 	import HeadingSecondary from "../../components/basic/HeadingSecondary.svelte";
+	import Dropdown from "../../components/basic/Dropdown.svelte";
+	import Search from "../../components/materials/Search.svelte";
+	let system = { name: "Niedersachsen", value: "nds" };
 </script>
 
 <svelte:head>
@@ -30,16 +33,20 @@
 	<Link href="/materials/contribute">hier lang</Link>!
 </ParagraphDefault>
 
+<!-- Todo: Add Search -->
+
 <div class="flex justify-between items-center">
 	<HeadingSecondary>Übersicht</HeadingSecondary>
-	<!--<div class="relative">
-		<Button class="text-slate-950 dark:text-slate-100"><Chevron>Niedersachsen</Chevron></Button>
-		<Dropdown>
-			<DropdownItem>Niedersachsen</DropdownItem>
-		</Dropdown>
-	</div>-->
+	<Dropdown
+		options={[{ name: "Niedersachsen", value: "nds" }]}
+		bind:selectedOption={system}
+		id={"system"}
+		color={undefined}
+	/>
 </div>
 
-<Overview type="grade" />
+<Search system={system ? system.value : ""} />
 
-<Overview type="subject" />
+<Overview system={system ? system.value : ""} type="grade" />
+
+<Overview system={system ? system.value : ""} type="subject" />

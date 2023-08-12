@@ -1,9 +1,8 @@
-
 # Schulen im Chaos Website
 
 ---
 
-*English*
+_English_
 
 This is the code for the website of the [Schulen im Chaos](https://schulenimchaos.de/) project.
 
@@ -17,7 +16,7 @@ Please note that this is only the front-end code and some functionality is provi
 
 ---
 
-*Deutsch*
+_Deutsch_
 
 Dies ist der Code für die Webseite von [Schulen im Chaos](https://schulenimchaos.de/).
 
@@ -35,5 +34,13 @@ Bitte beachte, dass dies nur der Frontend-Code ist und einige Funktionen von uns
 
 Huge thanks to everyone who takes part in the development:
 
- - [Nico / FunKey54](https://github.com/FunKey54)
- - [Linus / lynx197](https://github.com/lynx197)
+- [Alex / alexcoder04](https://github.com/alexcoder04)
+- [Nils / nwrenger](https://github.com/nwrenger)
+- [Nico / FunKey54](https://github.com/FunKey54)
+- [Linus / lynx197](https://github.com/lynx197)
+
+## To Do's
+
+- [x] Add all current routes -> add dropdown button and input component
+- [x] finish browse route -> filter, view, searching
+- [x] add github workflow for automatically deploying and running this website as a github page

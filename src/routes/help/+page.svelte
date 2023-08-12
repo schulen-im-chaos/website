@@ -42,5 +42,7 @@
 
 <ParagraphDefault>
 	Du kommst noch immer nicht weiter? Dann frag uns doch gerne entweder auf dem Discord-Server im
-	Support-Bereich oder per Mail an <Link href="mailto:{CONTACT_EMAIL}">{CONTACT_EMAIL}</Link>.
+	Support-Bereich oder per Mail an <Link href="mailto:{CONTACT_EMAIL}" external
+		>{CONTACT_EMAIL}</Link
+	>.
 </ParagraphDefault>
