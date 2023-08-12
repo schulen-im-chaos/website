@@ -8,20 +8,24 @@
 	export let system = "";
 
 	let search = "";
+	let grade = "";
+	let subject = "";
 
 	function getParam(key) {
 		return $page.url.searchParams.get(key) || "";
 	}
 
-	onMount(() => (search = getParam("search")));
+	onMount(() => {
+		search = getParam("search");
+		grade = getParam("grade_number");
+		subject = getParam("subject");
+	});
 </script>
 
 <Input bind:value={search} placeholder="(noch nicht funktionell!)" required name="suche" id="suche">
 	<Button
 		color="blue"
-		href="/materials/browse?system={system}&grade_number={getParam(
-			'grade_number'
-		)}&subject={getParam('subject')}&search={search}"
+		href="/materials/browse?system={system}&grade_number={grade}&subject={subject}&search={search}"
 		padding={"4"}
 		extra={undefined}
 	>
