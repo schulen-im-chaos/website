@@ -25,7 +25,7 @@
 		return gradeParam.split(",");
 	}
 
-	async function apply() {
+	function apply() {
 		if (type == "grade") {
 			goto(
 				`${base}/materials/browse?system=${getParam("system")}&grade_number=${selected
@@ -41,17 +41,18 @@
 				{ replaceState: true }
 			);
 		}
-		dataPromise = await getJson(`/v1/list-all/${type == "grade" ? "grade_number" : "subject"}`);
+		dataPromise = getJson(`/v1/list-all/${type == "grade" ? "grade_number" : "subject"}`);
 	}
 
 	let dataPromise = null;
 
 	onMount(async () => {
+		dataPromise = getJson(`/v1/list-all/${type == "grade" ? "grade_number" : "subject"}`);
 		selected = getGradesList().map((value) => ({ value }));
-		dataPromise = await getJson(`/v1/list-all/${type == "grade" ? "grade_number" : "subject"}`);
 		// every obj should be {name: '', value: ''} here you have to find and set selected so the names are in selected
+		const resolvedData = await dataPromise;
 		for (let i = 0; i < selected.length; i++) {
-			const matchingObj = dataPromise.data.find(
+			const matchingObj = resolvedData.data.find(
 				(obj) => obj.number === selected[i].value || obj.name === selected[i].value
 			);
 			if (matchingObj) {

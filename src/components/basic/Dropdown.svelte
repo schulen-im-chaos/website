@@ -9,7 +9,7 @@
 	export let id = "";
 	export let color;
 
-	export var fun = async () => {};
+	export var fun = () => {};
 
 	let temporarySelectedOptions = [{}];
 	let isOpen = false;
@@ -44,14 +44,14 @@
 		}
 	}
 
-	async function applySelection() {
+	function applySelection() {
 		if (multiSelect) {
 			selectedOptions = temporarySelectedOptions;
 			selectedOption.name = selectedOptions.map((obj) => obj.name).join(", ");
 			selectedOptions.sort((a, b) => a.name.localeCompare(b.name));
 		}
 		isOpen = false;
-		await fun();
+		fun();
 	}
 
 	function resetSelection() {
@@ -144,9 +144,9 @@
 								<!-- svelte-ignore a11y-label-has-associated-control -->
 								<label
 									class="flex items-center cursor-pointer p-2 min-w-[150px]"
-									on:click={async () => {
+									on:click={() => {
 										selectOption(option);
-										await applySelection();
+										applySelection();
 									}}
 								>
 									{option.name}
