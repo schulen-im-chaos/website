@@ -1,7 +1,5 @@
 <script>
 	import { page } from "$app/stores";
-	import { goto } from "$app/navigation";
-	import { base } from "$app/paths";
 
 	import Input from "../basic/Input.svelte";
 	import Button from "../basic/Button.svelte";
@@ -21,22 +19,9 @@
 <Input bind:value={search} placeholder="(noch nicht funktionell!)" required name="suche" id="suche">
 	<Button
 		color="blue"
-		onclick={() =>
-			// goto(
-			// 	`${base}/materials/browse?system=${system}&grade_number=${getParam(
-			// 		"grade_number"
-			// 	)}&subject=${getParam("subject")}&search=${search}`,
-			// 	{ replaceState: true }
-			// )
-			console.log(
-				"Searched:",
-				search,
-				"on system:",
-				system,
-				"with filers:",
-				getParam("grade_number"),
-				getParam("subject")
-			)}
+		href="/materials/browse?system={system}&grade_number={getParam(
+			'grade_number'
+		)}&subject={getParam('subject')}&search={search}"
 		padding={"4"}
 		extra={undefined}
 	>

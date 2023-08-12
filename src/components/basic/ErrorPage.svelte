@@ -21,15 +21,15 @@
 	>
 	<ParagraphDefault
 		>Wenn dieser Fehler erneut auftreten sollte, kontaktiere uns bitte über die <Link
-			href="{base}/contact">Kontakt-Seite</Link
+			href="/contact">Kontakt-Seite</Link
 		> oder direkt per Mail (<Link href="mailto:{CONTACT_EMAIL}">{CONTACT_EMAIL}</Link
 		>).</ParagraphDefault
 	>
 {/if}
 
 <ParagraphDefault
-	>Willst du stattdessen auf die <Link href="{base}/">Homepage</Link> schauen, <Link
-		href="{base}/materials">Schulmaterialien</Link
+	>Willst du stattdessen auf die <Link href="/">Homepage</Link> schauen, <Link href="/materials"
+		>Schulmaterialien</Link
 	> durchstöbern oder unseren <Link href={DISCORD_LINK} external>Discord-Server</Link> besuchen?</ParagraphDefault
 >
 

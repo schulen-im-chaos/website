@@ -1,5 +1,4 @@
 <script>
-	import { base } from "$app/paths";
 	import HeadingMain from "../components/basic/HeadingMain.svelte";
 	import ParagraphDefault from "../components/basic/ParagraphDefault.svelte";
 	import Link from "../components/basic/Link.svelte";
@@ -16,12 +15,12 @@
 <ParagraphDefault>
 	Schulen im Chaos ist eine Plattform, auf der Schüler sich gegenseitig unterstützen können. Dies
 	kann sowohl durch Austausch auf unserem <Link href={DISCORD_LINK} external>Discord-Server</Link> als
-	auch durch das Teilen der <Link href="{base}/materials">Lernmaterialien</Link> über die Webseite geschehen.
+	auch durch das Teilen der <Link href="/materials">Lernmaterialien</Link> über die Webseite geschehen.
 </ParagraphDefault>
 
 <ParagraphDefault>
 	Bitte beachte, dass die Webseite sich derzeit noch im Aufbau befindet und eine Funktionen nicht in
 	vollem Umfang verfügbar sind. Falls bei der Nutzung Probleme auftreten sollten oder du
 	Verbesserungsvorschläge mit uns teilen möchtest, kannst du dies über die
-	<Link href="{base}/contact">Kontaktseite</Link> tun.
+	<Link href="/contact">Kontaktseite</Link> tun.
 </ParagraphDefault>

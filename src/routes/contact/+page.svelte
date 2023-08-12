@@ -1,5 +1,4 @@
 <script>
-	import { base } from "$app/paths";
 	import Link from "../../components/basic/Link.svelte";
 	import HeadingMain from "../../components/basic/HeadingMain.svelte";
 	import Button from "../../components/basic/Button.svelte";
@@ -42,12 +41,12 @@
 	<meta name="description" content="Kontaktiere unser Team hier." />
 </svelte:head>
 <div class="w-full max-w-3xl pb-4 px-2 text-sm">
-	<Alert bind:hidden={successHidden} hrefOnClose="{base}/" color="red" id="success">
+	<Alert bind:hidden={successHidden} hrefOnClose="/" color="red" id="success">
 		Es gab einen Fehler beim Abschicken Deiner Nachricht. Bitte probiere es später erneut oder
-		schreibe uns eine Mail an <Link href="mailto:{CONTACT_EMAIL}">{CONTACT_EMAIL}</Link>.
+		schreibe uns eine Mail an <Link href="mailto:{CONTACT_EMAIL}" external>{CONTACT_EMAIL}</Link>.
 	</Alert>
 
-	<Alert bind:hidden={alertHidden} hrefOnClose="{base}/" color="blue" id="alert">
+	<Alert bind:hidden={alertHidden} hrefOnClose="/" color="blue" id="alert">
 		Deine Nachricht wurde erfolgreich abgeschickt.
 	</Alert>
 </div>
@@ -58,7 +57,7 @@
 	<div class="flex flex-col md:flex-row md:justify-between">
 		<div class="md:w-1/2 p-2">
 			<Label forId="name">Name</Label>
-			<InputInline required id="name" placeholder="Name" name="name" value=''>
+			<InputInline required id="name" placeholder="Name" name="name" value="">
 				<svg
 					aria-hidden="true"
 					class="w-6 h-6"
@@ -73,7 +72,7 @@
 
 		<div class="md:w-1/2 p-2">
 			<Label forId="email">E-Mail</Label>
-			<InputInline required id="email" name="email" placeholder="E-Mail" value=''>
+			<InputInline required id="email" name="email" placeholder="E-Mail" value="">
 				<svg
 					aria-hidden="true"
 					class="w-6 h-6"
@@ -94,7 +93,7 @@
 	</div>
 
 	<div class="w-full p-2">
-		Es gilt unsere <Link href="{base}/legal/data-protection">Datenschutzerklärung</Link>.
+		Es gilt unsere <Link href="/legal/data-protection">Datenschutzerklärung</Link>.
 	</div>
 
 	<div class="w-full p-2 flex">
@@ -104,6 +103,6 @@
 	<div class="w-full p-2 text-center font-light">ODER</div>
 
 	<div class="w-full p-2 text-center">
-		Schreibe uns eine E-Mail an <Link href="mailto:{CONTACT_EMAIL}">{CONTACT_EMAIL}</Link>.
+		Schreibe uns eine E-Mail an <Link href="mailto:{CONTACT_EMAIL}" external>{CONTACT_EMAIL}</Link>.
 	</div>
 </form>

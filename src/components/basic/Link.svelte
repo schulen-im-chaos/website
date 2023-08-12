@@ -1,10 +1,11 @@
 <script>
+	import { base } from "$app/paths";
 	export let href;
 	export let external = false;
 </script>
 
 <a
-	{href}
+	href={!external ? `${base}${href}` : href}
 	{...external ? { target: "_blank" } : {}}
 	class="text-blue-600 hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300 hover:underline whitespace-nowrap"
 >

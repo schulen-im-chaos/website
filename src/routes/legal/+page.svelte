@@ -1,10 +1,7 @@
 <script>
-	import { base } from "$app/paths";
 	import Link from "../../components/basic/Link.svelte";
 </script>
 
 <p>
-	Die angefragte URL existiert nicht, Sie werden zum <Link href="{base}/legal/imprint"
-		>Impressum</Link
-	> weitergeleitet...
+	Die angefragte URL existiert nicht, Sie werden zum <Link href="/legal/imprint">Impressum</Link> weitergeleitet...
 </p>
