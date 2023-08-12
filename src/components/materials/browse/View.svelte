@@ -69,8 +69,8 @@
 			</div>
 		{:else}
 			<ParagraphDefault>
-				Du hast weder Klassenstufe, Fach oder einen Suchbegriff angegeben. Bitte ändere deine Angabe
-				und versuche es erneut.
+				Du hast weder Klassenstufe, Fach noch Suchbegriff angegeben. Bitte ändere deine Angabe und
+				versuche es erneut.
 			</ParagraphDefault>
 		{/if}
 	{:else if items === null}
