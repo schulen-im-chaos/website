@@ -58,7 +58,7 @@
 	<div class="flex flex-col md:flex-row md:justify-between">
 		<div class="md:w-1/2 p-2">
 			<Label forId="name">Name</Label>
-			<InputInline required id="name" placeholder="Name" name="name" value>
+			<InputInline required id="name" placeholder="Name" name="name" value=''>
 				<svg
 					aria-hidden="true"
 					class="w-6 h-6"
@@ -73,7 +73,7 @@
 
 		<div class="md:w-1/2 p-2">
 			<Label forId="email">E-Mail</Label>
-			<InputInline required id="email" name="email" placeholder="E-Mail" value>
+			<InputInline required id="email" name="email" placeholder="E-Mail" value=''>
 				<svg
 					aria-hidden="true"
 					class="w-6 h-6"

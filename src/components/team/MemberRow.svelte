@@ -1,5 +1,5 @@
 <script>
-	import HeadingMain from "./HeadingMain.svelte";
+	import HeadingMain from "../basic/HeadingMain.svelte";
 
 	export let imgname;
 	export let name;

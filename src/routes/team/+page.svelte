@@ -1,6 +1,6 @@
 <script>
 	import HeadingMain from "../../components/basic/HeadingMain.svelte";
-	import MemberRow from "../../components/basic/MemberRow.svelte";
+	import MemberRow from "../../components/team/MemberRow.svelte";
 	import Link from "../../components/basic/Link.svelte";
 	import ParagraphDefault from "../../components/basic/ParagraphDefault.svelte";
 </script>
