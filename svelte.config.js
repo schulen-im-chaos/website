@@ -11,8 +11,17 @@ const config = {
 			assets: "build",
 			fallback: undefined,
 			precompress: false,
-			strict: true
+			strict: false
 		}),
+		prerender: {
+			handleHttpError: ({ path, referrer, message }) => {
+				if (path == "/404") {
+					return;
+				}
+
+				throw new Error(message);
+			}
+		},
 		paths: {
 			base: dev ? "" : process.env.BASE_PATH
 		}

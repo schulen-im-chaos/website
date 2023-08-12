@@ -18,13 +18,14 @@
 	let itemsPromise = null;
 	let subject = "";
 	let grade = "";
+	let search = "";
 	let mounted = false;
 
 	onMount(() => (mounted = true));
 
-	$: grade = $page.url.searchParams.get("grade_number") || "";
-	$: subject = $page.url.searchParams.get("subject") || "";
-	$: search = $page.url.searchParams.get("search") || "";
+	$: if (mounted) grade = $page.url.searchParams.get("grade_number") || "";
+	$: if (mounted) subject = $page.url.searchParams.get("subject") || "";
+	$: if (mounted) search = $page.url.searchParams.get("search") || "";
 	$: if (grade == "" && subject == "" && search == "") {
 		itemsPromise = { data: [] };
 		invalid = true;

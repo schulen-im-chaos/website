@@ -5,6 +5,7 @@
 
 	import Input from "../basic/Input.svelte";
 	import Button from "../basic/Button.svelte";
+	import { onMount } from "svelte";
 
 	export let system = "";
 
@@ -14,20 +15,30 @@
 		return $page.url.searchParams.get(key) || "";
 	}
 
-	search = getParam("search");
+	onMount(() => (search = getParam("search")));
 </script>
 
-<Input bind:value={search} placeholder="(noch nicht funktionell!)">
+<Input bind:value={search} placeholder="(noch nicht funktionell!)" required name="suche" id="suche">
 	<Button
 		color="blue"
 		onclick={() =>
-			goto(
-				`${base}/materials/browse?system=${system}&grade_number=${getParam(
-					"grade_number"
-				)}&subject=${getParam("subject")}&search=${search}`,
-				{ replaceState: true }
+			// goto(
+			// 	`${base}/materials/browse?system=${system}&grade_number=${getParam(
+			// 		"grade_number"
+			// 	)}&subject=${getParam("subject")}&search=${search}`,
+			// 	{ replaceState: true }
+			// )
+			console.log(
+				"Searched:",
+				search,
+				"on system:",
+				system,
+				"with filers:",
+				getParam("grade_number"),
+				getParam("subject")
 			)}
 		padding={"4"}
+		extra={undefined}
 	>
 		<svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16" class="w-5"
 			><path

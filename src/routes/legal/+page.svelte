@@ -1,6 +1,6 @@
 <script>
 	import { base } from "$app/paths";
-	import Link from "../../components/Link.svelte";
+	import Link from "../../components/basic/Link.svelte";
 </script>
 
 <p>

@@ -1,13 +1,13 @@
 <script>
 	import { base } from "$app/paths";
 	import { page } from "$app/stores";
-	import PageTitle from "./PageTitle.svelte";
+	import HeadingMain from "./HeadingMain.svelte";
 	import Link from "./Link.svelte";
-	import { CONTACT_EMAIL, DISCORD_LINK } from "../globals";
+	import { CONTACT_EMAIL, DISCORD_LINK } from "../../globals";
 	import ParagraphDefault from "./ParagraphDefault.svelte";
 </script>
 
-<PageTitle>Ooops, ein Fehler!..</PageTitle>
+<HeadingMain>Ooops, ein Fehler!..</HeadingMain>
 
 <ParagraphDefault>Die Schulen scheinen ja wirklich im Chaos zu sein!..</ParagraphDefault>
 

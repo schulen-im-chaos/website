@@ -42,12 +42,12 @@
 	<meta name="description" content="Kontaktiere unser Team hier." />
 </svelte:head>
 <div class="w-full max-w-3xl pb-4 px-2 text-sm">
-	<Alert bind:hidden={successHidden} hrefOnClose="{base}/" color="red">
+	<Alert bind:hidden={successHidden} hrefOnClose="{base}/" color="red" id="success">
 		Es gab einen Fehler beim Abschicken Deiner Nachricht. Bitte probiere es später erneut oder
 		schreibe uns eine Mail an <Link href="mailto:{CONTACT_EMAIL}">{CONTACT_EMAIL}</Link>.
 	</Alert>
 
-	<Alert bind:hidden={alertHidden} hrefOnClose="{base}/" color="blue">
+	<Alert bind:hidden={alertHidden} hrefOnClose="{base}/" color="blue" id="alert">
 		Deine Nachricht wurde erfolgreich abgeschickt.
 	</Alert>
 </div>
@@ -58,7 +58,7 @@
 	<div class="flex flex-col md:flex-row md:justify-between">
 		<div class="md:w-1/2 p-2">
 			<Label forId="name">Name</Label>
-			<InputInline required id="name" placeholder="Name" name="name">
+			<InputInline required id="name" placeholder="Name" name="name" value>
 				<svg
 					aria-hidden="true"
 					class="w-6 h-6"
@@ -73,7 +73,7 @@
 
 		<div class="md:w-1/2 p-2">
 			<Label forId="email">E-Mail</Label>
-			<InputInline required id="email" name="email" placeholder="E-Mail" type="email" class="block">
+			<InputInline required id="email" name="email" placeholder="E-Mail" value>
 				<svg
 					aria-hidden="true"
 					class="w-6 h-6"
