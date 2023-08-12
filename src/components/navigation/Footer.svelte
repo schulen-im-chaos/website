@@ -21,7 +21,7 @@
 
 			<!-- social media with corresponding icons -->
 			<FooterGroup title="Soziale Medien">
-				<FooterGroupItem href={DISCORD_LINK} target="_blank" external>
+				<FooterGroupItem href={DISCORD_LINK} external>
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
 						fill="currentColor"
@@ -34,7 +34,7 @@
 					</svg>
 					Discord
 				</FooterGroupItem>
-				<FooterGroupItem href={INSTAGRAM_LINK} target="_blank" external>
+				<FooterGroupItem href={INSTAGRAM_LINK} external>
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
 						fill="currentColor"
@@ -47,7 +47,7 @@
 					</svg>
 					Instagram
 				</FooterGroupItem>
-				<FooterGroupItem href={GITHUB_LINK} target="_blank" external>
+				<FooterGroupItem href={GITHUB_LINK} external>
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
 						fill="currentColor"

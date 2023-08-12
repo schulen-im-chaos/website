@@ -21,9 +21,6 @@ const config = {
 
 				throw new Error(message);
 			}
-		},
-		paths: {
-			base: dev ? "" : process.env.BASE_PATH
 		}
 	},
 	preprocess: vitePreprocess()

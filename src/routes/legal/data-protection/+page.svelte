@@ -1,6 +1,7 @@
 <script>
 	import HeadingMain from "../../../components/basic/HeadingMain.svelte";
 	import HeadingSecondary from "../../../components/basic/HeadingSecondary.svelte";
+	import SubHeading from "../../../components/basic/SubHeading.svelte";
 	import LongParagraph from "../../../components/basic/ParagraphLong.svelte";
 	import { CONTACT_EMAIL } from "../../../globals";
 </script>
@@ -15,7 +16,7 @@
 <!--  Bereich 1.  -->
 
 <HeadingSecondary>1. Datenschutz auf einen Blick</HeadingSecondary>
-<h3 class="text-base md:text-lg px-2 md:px-0">Allgemeine Hinweise</h3>
+<SubHeading>Allgemeine Hinweise</SubHeading>
 <LongParagraph
 	>Die folgenden Hinweise geben einen einfachen Überblick darüber, was mit Ihren personenbezogenen
 	Daten passiert, wenn Sie diese Website besuchen. Personenbezogene Daten sind alle Daten, mit denen
@@ -23,16 +24,14 @@
 	entnehmen Sie unserer unter diesem Text aufgeführten Datenschutzerklärung.</LongParagraph
 >
 <br />
-<h3 class="text-base md:text-lg px-2 md:px-0">
-	Wer ist verantwortlich für die Datenerfassung auf dieser Website?
-</h3>
+<SubHeading>Wer ist verantwortlich für die Datenerfassung auf dieser Website?</SubHeading>
 <LongParagraph
 	>Die Datenverarbeitung auf dieser Website erfolgt durch den Websitebetreiber. Dessen Kontaktdaten
 	können Sie dem Abschnitt „Hinweis zur Verantwortlichen Stelle“ in dieser Datenschutzerklärung
 	entnehmen.</LongParagraph
 >
 <br />
-<h3 class="text-base md:text-lg px-2 md:px-0">Wie erfassen wir Ihre Daten?</h3>
+<SubHeading>Wie erfassen wir Ihre Daten?</SubHeading>
 <LongParagraph
 	>Ihre Daten werden zum einen dadurch erhoben, dass Sie uns diese mitteilen. Hierbei kann es sich
 	z. B. um Daten handeln, die Sie in ein Kontaktformular eingeben. Andere Daten werden automatisch
@@ -41,13 +40,13 @@
 	Erfassung dieser Daten erfolgt automatisch, sobald Sie diese Website betreten.</LongParagraph
 >
 <br />
-<h3 class="text-base md:text-lg px-2 md:px-0">Wofür nutzen wir Ihre Daten?</h3>
+<SubHeading>Wofür nutzen wir Ihre Daten?</SubHeading>
 <LongParagraph
 	>Ein Teil der Daten wird erhoben, um eine fehlerfreie Bereitstellung der Website zu gewährleisten.
 	Andere Daten können zur Analyse Ihres Nutzerverhaltens verwendet werden.</LongParagraph
 >
 <br />
-<h3 class="text-base md:text-lg px-2 md:px-0">Welche Rechte haben Sie bezüglich Ihrer Daten?</h3>
+<SubHeading>Welche Rechte haben Sie bezüglich Ihrer Daten?</SubHeading>
 <LongParagraph
 	>Sie haben jederzeit das Recht, unentgeltlich Auskunft über Herkunft, Empfänger und Zweck Ihrer
 	gespeicherten personenbezogenen Daten zu erhalten. Sie haben außerdem ein Recht, die Berichtigung
@@ -61,7 +60,7 @@
 <!--  Bereich 2.  -->
 
 <HeadingSecondary>2. Hosting</HeadingSecondary>
-<h3 class="text-base md:text-lg px-2 md:px-0">Externes Hosting</h3>
+<SubHeading>Externes Hosting</SubHeading>
 <LongParagraph
 	>Diese Website wird extern gehostet. Die personenbezogenen Daten, die auf dieser Website erfasst
 	werden, werden auf den Servern des Hosters / der Hoster gespeichert. Hierbei kann es sich v. a. um
@@ -82,7 +81,7 @@
 <!--  Bereich 3.  -->
 
 <HeadingSecondary>3. Allgemeine Hinweise und Pflichtinformationen</HeadingSecondary>
-<h3 class="text-base md:text-lg px-2 md:px-0">Datenschutz</h3>
+<SubHeading>Datenschutz</SubHeading>
 <LongParagraph
 	>Die Betreiber dieser Seiten nehmen den Schutz Ihrer persönlichen Daten sehr ernst. Wir behandeln
 	Ihre personenbezogenen Daten vertraulich und entsprechend den gesetzlichen Datenschutzvorschriften
@@ -97,7 +96,7 @@
 	Daten befolgen.</LongParagraph
 >
 <br />
-<h3 class="text-base md:text-lg px-2 md:px-0">Hinweis zur verantwortlichen Stelle</h3>
+<SubHeading>Hinweis zur verantwortlichen Stelle</SubHeading>
 
 <div class="px-2">
 	<p>Die verantwortliche Stelle für die Datenverarbeitung auf dieser Website ist:</p>
@@ -120,7 +119,7 @@
 </div>
 
 <br />
-<h3 class="text-base md:text-lg px-2 md:px-0">Speicherdauer</h3>
+<SubHeading>Speicherdauer</SubHeading>
 <LongParagraph
 	>Soweit innerhalb dieser Datenschutzerklärung keine speziellere Speicherdauer genannt wurde,
 	verbleiben Ihre personenbezogenen Daten bei uns, bis der Zweck für die Datenverarbeitung entfällt.
@@ -131,9 +130,9 @@
 	dieser Gründe.</LongParagraph
 >
 <br />
-<h3 class="text-base md:text-lg px-2 md:px-0">
+<SubHeading>
 	Allgemeine Hinweise zu den Rechtsgrundlagen der Datenverarbeitung auf dieser Website
-</h3>
+</SubHeading>
 <LongParagraph
 	>Sofern Sie in die Datenverarbeitung eingewilligt haben, verarbeiten wir Ihre personenbezogenen
 	Daten auf Grundlage von Art. 6 Abs. 1 lit. a DSGVO bzw. Art. 9 Abs. 2 lit. a DSGVO, sofern
@@ -151,9 +150,7 @@
 	Rechtsgrundlagen wird in den folgenden Absätzen dieser Datenschutzerklärung informiert.</LongParagraph
 >
 <br />
-<h3 class="text-base md:text-lg px-2 md:px-0">
-	Hinweis zur Datenweitergabe in die USA und sonstige Drittstaaten
-</h3>
+<SubHeading>Hinweis zur Datenweitergabe in die USA und sonstige Drittstaaten</SubHeading>
 <LongParagraph
 	>Wir verwenden unter anderem Tools von Unternehmen mit Sitz in den USA oder sonstigen
 	datenschutzrechtlich nicht sicheren Drittstaaten. Wenn diese Tools aktiv sind, können Ihre
@@ -166,7 +163,7 @@
 	speichern. Wir haben auf diese Verarbeitungstätigkeiten keinen Einfluss.</LongParagraph
 >
 <br />
-<h3 class="text-base md:text-lg px-2 md:px-0">Empfänger von personenbezogenen Daten</h3>
+<SubHeading>Empfänger von personenbezogenen Daten</SubHeading>
 <LongParagraph
 	>Im Rahmen unserer Geschäftstätigkeit arbeiten wir mit verschiedenen externen Stellen zusammen.
 	Dabei ist teilweise auch eine Übermittlung von personenbezogenen Daten an diese externen Stellen
@@ -179,17 +176,17 @@
 	Verarbeitung wird ein Vertrag über gemeinsame Verarbeitung geschlossen.</LongParagraph
 >
 <br />
-<h3 class="text-base md:text-lg px-2 md:px-0">Widerruf Ihrer Einwilligung zur Datenverarbeitung</h3>
+<SubHeading>Widerruf Ihrer Einwilligung zur Datenverarbeitung</SubHeading>
 <LongParagraph
 	>Viele Datenverarbeitungsvorgänge sind nur mit Ihrer ausdrücklichen Einwilligung möglich. Sie
 	können eine bereits erteilte Einwilligung jederzeit widerrufen. Die Rechtmäßigkeit der bis zum
 	Widerruf erfolgten Datenverarbeitung bleibt vom Widerruf unberührt.</LongParagraph
 >
 <br />
-<h3 class="text-base md:text-lg px-2 md:px-0">
+<SubHeading>
 	Widerspruchsrecht gegen die Datenerhebung in besonderen Fällen sowie gegen Direktwerbung (Art. 21
 	DSGVO)
-</h3>
+</SubHeading>
 <LongParagraph
 	>WENN DIE DATENVERARBEITUNG AUF GRUNDLAGE VON ART. 6 ABS. 1 LIT. E ODER F DSGVO ERFOLGT, HABEN SIE
 	JEDERZEIT DAS RECHT, AUS GRÜNDEN, DIE SICH AUS IHRER BESONDEREN SITUATION ERGEBEN, GEGEN DIE
@@ -209,9 +206,7 @@
 	DER DIREKTWERBUNG VERWENDET (WIDERSPRUCH NACH ART. 21 ABS. 2 DSGVO).</LongParagraph
 >
 <br />
-<h3 class="text-base md:text-lg px-2 md:px-0">
-	Beschwerde­recht bei der zuständigen Aufsichts­behörde
-</h3>
+<SubHeading>Beschwerde­recht bei der zuständigen Aufsichts­behörde</SubHeading>
 <LongParagraph
 	>Im Falle von Verstößen gegen die DSGVO steht den Betroffenen ein Beschwerderecht bei einer
 	Aufsichtsbehörde, insbesondere in dem Mitgliedstaat ihres gewöhnlichen Aufenthalts, ihres
@@ -219,7 +214,7 @@
 	unbeschadet anderweitiger verwaltungsrechtlicher oder gerichtlicher Rechtsbehelfe.</LongParagraph
 >
 <br />
-<h3 class="text-base md:text-lg px-2 md:px-0">Recht auf Daten­übertrag­barkeit</h3>
+<SubHeading>Recht auf Daten­übertrag­barkeit</SubHeading>
 <LongParagraph
 	>Sie haben das Recht, Daten, die wir auf Grundlage Ihrer Einwilligung oder in Erfüllung eines
 	Vertrags automatisiert verarbeiten, an sich oder an einen Dritten in einem gängigen,
@@ -227,7 +222,7 @@
 	einen anderen Verantwortlichen verlangen, erfolgt dies nur, soweit es technisch machbar ist.</LongParagraph
 >
 <br />
-<h3 class="text-base md:text-lg px-2 md:px-0">Auskunft, Berichtigung und Löschung</h3>
+<SubHeading>Auskunft, Berichtigung und Löschung</SubHeading>
 <LongParagraph
 	>Sie haben im Rahmen der geltenden gesetzlichen Bestimmungen jederzeit das Recht auf
 	unentgeltliche Auskunft über Ihre gespeicherten personenbezogenen Daten, deren Herkunft und
@@ -236,7 +231,7 @@
 	jederzeit an uns wenden.</LongParagraph
 >
 <br />
-<h3 class="text-base md:text-lg px-2 md:px-0">Recht auf Einschränkung der Verarbeitung</h3>
+<SubHeading>Recht auf Einschränkung der Verarbeitung</SubHeading>
 <LongParagraph
 	>Sie haben das Recht, die Einschränkung der Verarbeitung Ihrer personenbezogenen Daten zu
 	verlangen. Hierzu können Sie sich jederzeit an uns wenden. Das Recht auf Einschränkung der
@@ -275,7 +270,7 @@
 >
 <br />
 
-<h3 class="text-base md:text-lg px-2 md:px-0">Widerspruch gegen Werbe-E-Mails</h3>
+<SubHeading>Widerspruch gegen Werbe-E-Mails</SubHeading>
 <LongParagraph
 	>Der Nutzung von im Rahmen der Impressumspflicht veröffentlichten Kontaktdaten zur Übersendung von
 	nicht ausdrücklich angeforderter Werbung und Informationsmaterialien wird hiermit widersprochen.
@@ -287,7 +282,7 @@
 <!--  Bereich 4.  -->
 
 <HeadingSecondary>4. Datenerfassung auf dieser Website</HeadingSecondary>
-<h3 class="text-base md:text-lg px-2 md:px-0">Server-Log-Dateien</h3>
+<SubHeading>Server-Log-Dateien</SubHeading>
 <LongParagraph
 	>Der Provider der Seiten erhebt und speichert automatisch Informationen in so genannten
 	Server-Log-Dateien, die Ihr Browser automatisch an uns übermittelt. Dies sind:</LongParagraph
@@ -311,7 +306,7 @@
 	Optimierung seiner Website – hierzu müssen die Server-Log-Files erfasst werden.</LongParagraph
 >
 <br />
-<h3 class="text-base md:text-lg px-2 md:px-0">Kontaktformular</h3>
+<SubHeading>Kontaktformular</SubHeading>
 <LongParagraph
 	>Wenn Sie uns per Kontaktformular Anfragen zukommen lassen, werden Ihre Angaben aus dem
 	Anfrageformular inklusive der von Ihnen dort angegebenen Kontaktdaten zwecks Bearbeitung der
@@ -335,7 +330,7 @@
 	Bestimmungen – insbesondere Aufbewahrungsfristen – bleiben unberührt.</LongParagraph
 >
 <br />
-<h3 class="text-base md:text-lg px-2 md:px-0">Anfrage per E-Mail, Telefon oder Telefax</h3>
+<SubHeading>Anfrage per E-Mail, Telefon oder Telefax</SubHeading>
 <LongParagraph
 	>Wenn Sie uns per E-Mail, Telefon oder Telefax kontaktieren, wird Ihre Anfrage inklusive aller
 	daraus hervorgehenden personenbezogenen Daten (Name, Anfrage) zum Zwecke der Bearbeitung Ihres
@@ -363,7 +358,7 @@
 <!--  Bereich 5.  -->
 
 <HeadingSecondary>5. Plugins und Tools</HeadingSecondary>
-<h3 class="text-base md:text-lg px-2 md:px-0">Google Fonts</h3>
+<SubHeading>Google Fonts</SubHeading>
 <LongParagraph
 	>Diese Seite nutzt zur einheitlichen Darstellung von Schriftarten so genannte Google Fonts, die
 	von Google bereitgestellt werden. Beim Aufruf einer Seite lädt Ihr Browser die benötigten Fonts in
@@ -396,7 +391,7 @@
 <!--  Bereich 6.  -->
 
 <HeadingSecondary>6. Eigene Dienste</HeadingSecondary>
-<h3 class="text-base md:text-lg px-2 md:px-0">OneDrive</h3>
+<SubHeading>OneDrive</SubHeading>
 <LongParagraph
 	>Wir haben OneDrive auf dieser Website eingebunden. Anbieter ist die Microsoft Ireland Operations
 	Limited, One Microsoft Place, South County Business Park, Leopardstown, Dublin 18, Irland (im
@@ -418,7 +413,7 @@
 	widerrufbar.</LongParagraph
 >
 <br />
-<h3 class="text-base md:text-lg px-2 md:px-0">Google Drive</h3>
+<SubHeading>Google Drive</SubHeading>
 <LongParagraph
 	>Wir haben Google Drive auf dieser Website eingebunden. Anbieter ist die Google Ireland Limited
 	(„Google“), Gordon House, Barrow Street, Dublin 4, Irland.</LongParagraph

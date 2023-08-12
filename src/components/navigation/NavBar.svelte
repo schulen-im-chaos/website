@@ -1,8 +1,8 @@
 <script>
-	import { base } from "$app/paths";
 	import Button from "../basic/Button.svelte";
 	import NavDropdown from "./NavDropdown.svelte";
 	import NavItem from "./NavItem.svelte";
+	import { DISCORD_LINK } from "../../globals";
 
 	let showMenu = false;
 
@@ -17,7 +17,7 @@
 		<!-- brand logo and hamburger menu -->
 		<div class="flex justify-between">
 			<!-- brand logo -->
-			<a href="{base}/" class="flex items-center">
+			<a href="/" class="flex items-center">
 				<img src="/favicon.png" class="mx-3 h-7 sm:h-9 lg:h-11" alt="Schulen im Chaos Logo" />
 				<span class="self-center whitespace-nowrap text-base sm:text-lg font-semibold">
 					Schulen im Chaos
@@ -68,8 +68,9 @@
 				<NavItem href="/team">Unser Team</NavItem>
 			</NavDropdown>
 			<NavItem href="/contact">Kontakt</NavItem>
+			<div class="pt-1" />
 			<Button
-				href="https://discord.com/invite/nWd8yZ4HWY"
+				href={DISCORD_LINK}
 				target="_blank"
 				color="emerald"
 				external

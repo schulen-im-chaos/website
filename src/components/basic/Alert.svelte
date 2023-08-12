@@ -1,6 +1,4 @@
 <script>
-	import { base } from "$app/paths";
-
 	export let id, color, hrefOnClose;
 	export let hidden = true;
 </script>
@@ -13,7 +11,7 @@
 		<div>
 			<slot />
 		</div>
-		<a href="{base}/{hrefOnClose}">
+		<a href={hrefOnClose}>
 			<span class="sr-only">Close</span>
 			<svg
 				class="w-5 h-5"

@@ -18,7 +18,7 @@ export default {
 			tn: "12px",
 			sm: "16px",
 			base: "18px",
-			medium: "20px",
+			medium: "18px",
 			lg: "24px",
 			xl: "28px",
 			"2xl": "30px",

@@ -2,7 +2,6 @@
 	import { page } from "$app/stores";
 	import { onMount } from "svelte";
 	import { goto } from "$app/navigation";
-	import { base } from "$app/paths";
 
 	import { getJson } from "../../../lib/api.js";
 	import Dropdown from "../../basic/Dropdown.svelte";
@@ -28,14 +27,14 @@
 	function apply() {
 		if (type == "grade") {
 			goto(
-				`${base}/materials/browse?system=${getParam("system")}&grade_number=${selected
+				`/materials/browse?system=${getParam("system")}&grade_number=${selected
 					.map((obj) => obj.value)
 					.join(",")}&subject=${getParam("subject")}`,
 				{ replaceState: true }
 			);
 		} else {
 			goto(
-				`${base}/materials/browse?system=${getParam("system")}&grade_number=${getParam(
+				`/materials/browse?system=${getParam("system")}&grade_number=${getParam(
 					"grade_number"
 				)}&subject=${selected.map((obj) => obj.value).join(",")}`,
 				{ replaceState: true }
@@ -93,7 +92,7 @@
 	{:else if data === null}
 		<Spinner color="gray" />
 	{:else}
-		Wrong Data Structure
+		Unerwartete Datenstruktur erhalten.
 	{/if}
 {:catch error}
 	Fehler: {error}

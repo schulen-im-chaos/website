@@ -112,8 +112,8 @@
 			class="bg-white dark:bg-gray-700 text-gray-700 dark:text-gray-200 rounded-lg border-gray-100 dark:border-gray-700 shadow-md outline-none divide-y divide-gray-100 dark:divide-gray-600 absolute mt-2 border border-gray-300 rounded-md shadow-lg z-10"
 		>
 			{#if multiSelect}
-				<div class="flex justify-center p-2">
-					<div class="overflow-hidden rounded-t-lg">
+				<div class="flex justify-center p-2 w-full">
+					<div class="overflow-hidden rounded-b-lg w-full">
 						<button
 							type="button"
 							class="text-center focus:outline-none inline-flex items-center justify-center px-5 py-2.5 bg-primary-700 dark:bg-primary-600 focus:ring-primary-300 dark:focus:ring-primary-800 rounded-lg w-full text-red-700 dark:text-red-500 hover:bg-gray-100 dark:hover:bg-gray-600 disabled:text-gray-400"
@@ -157,8 +157,8 @@
 				{/each}
 			</ul>
 			{#if multiSelect}
-				<div class="flex justify-center p-2">
-					<div class="overflow-hidden rounded-b-lg">
+				<div class="flex justify-center p-2 w-full">
+					<div class="overflow-hidden rounded-b-lg w-full">
 						<button
 							type="button"
 							class="text-center focus:outline-none inline-flex items-center justify-center px-5 py-2.5 bg-primary-700 dark:bg-primary-600 focus:ring-primary-300 dark:focus:ring-primary-800 rounded-lg w-full text-slate-950 dark:text-slate-100 hover:bg-gray-100 dark:hover:bg-gray-600"

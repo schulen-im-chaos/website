@@ -1,13 +1,10 @@
 <script>
-	import { base } from "$app/paths";
-
 	export let href = undefined;
 	export let color = "blue";
 	export let type = "button";
 	export let onclick = () => {};
 	export let padding = "2";
 	export let extra;
-	export let target = "";
 	export let disabled = false;
 	export let external = false;
 
@@ -19,7 +16,7 @@
 		<slot />
 	</button>
 {:else}
-	<a href={!external ? `${base}${href}` : href} class={style} {target}>
+	<a {href} class={style} target={external ? "_blank" : ""}>
 		<slot />
 	</a>
 {/if}

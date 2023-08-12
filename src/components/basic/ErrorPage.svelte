@@ -1,5 +1,4 @@
 <script>
-	import { base } from "$app/paths";
 	import { page } from "$app/stores";
 	import HeadingMain from "./HeadingMain.svelte";
 	import Link from "./Link.svelte";

@@ -11,6 +11,7 @@
 
 	let successHidden = true;
 	let alertHidden = true;
+	let buttonDisabled = false;
 
 	async function handleSubmit(event) {
 		event.preventDefault();
@@ -18,6 +19,7 @@
 		const formData = new FormData(event.target);
 
 		try {
+			buttonDisabled = true;
 			const resp = await fetch(`${API_BASE_URL}/v1/special/sendmail`, {
 				method: "POST",
 				body: formData
@@ -32,6 +34,7 @@
 			alertHidden = false;
 		}
 
+		buttonDisabled = false;
 		event.target.reset();
 	}
 </script>
@@ -53,7 +56,7 @@
 
 <HeadingMain>Kontakt</HeadingMain>
 
-<form class="px-2 max-w-3xl" id="message-form" on:submit={handleSubmit}>
+<form class="m-auto px-2 max-w-3xl" id="message-form" on:submit={handleSubmit}>
 	<div class="flex flex-col md:flex-row md:justify-between">
 		<div class="md:w-1/2 p-2">
 			<Label forId="name">Name</Label>
@@ -97,7 +100,9 @@
 	</div>
 
 	<div class="w-full p-2 flex">
-		<Button color="blue" type="submit" padding="3" extra="w-full">Senden</Button>
+		<Button color="blue" type="submit" padding="3" extra="w-full" disabled={buttonDisabled}
+			>Senden</Button
+		>
 	</div>
 
 	<div class="w-full p-2 text-center font-light">ODER</div>
