@@ -16,9 +16,10 @@
 	}
 
 	onMount(() => {
-		search = getParam("search");
+		if (!system) system = getParam("system");
 		grade = getParam("grade_number");
 		subject = getParam("subject");
+		search = getParam("search");
 	});
 </script>
 

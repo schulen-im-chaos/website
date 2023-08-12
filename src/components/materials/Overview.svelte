@@ -31,9 +31,9 @@
 		{#if items && items.data}
 			{#each items.data as item}
 				<ButtonGradient
-					href="/materials/browse?{type == 'grade'
+					href="/materials/browse?system={system}&{type == 'grade'
 						? `grade_number=${item.number}`
-						: `subject=${item.name}`}&system={system}"
+						: `subject=${item.name}`}"
 					color={item.color}
 				>
 					{type == "grade" ? item.number : item.name_de}
