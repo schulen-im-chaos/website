@@ -123,7 +123,7 @@
 					</div>
 				</div>
 			{/if}
-			<ul class="p-1 overflow-y-auto min-w-[200px] max-h-[200px]" {id}>
+			<ul class="p-1 overflow-y-auto min-w-[150px] max-h-[200px]" {id}>
 				{#each options as option (option.value)}
 					<div class="p-1">
 						<li class="rounded hover:bg-gray-100 dark:hover:bg-gray-600">
