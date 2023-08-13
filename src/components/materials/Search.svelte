@@ -20,7 +20,7 @@
 		search = $page.url.searchParams.get("search") || "";
 	});
 
-	$: if (mounted && !system) subject = $page.url.searchParams.get("system") || "";
+	$: if (mounted && !system) system = $page.url.searchParams.get("system") || "";
 	$: if (mounted) grade = $page.url.searchParams.get("grade_number") || "";
 	$: if (mounted) subject = $page.url.searchParams.get("subject") || "";
 </script>
