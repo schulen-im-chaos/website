@@ -71,7 +71,6 @@
 			<div class="pt-1" />
 			<Button
 				href={DISCORD_LINK}
-				target="_blank"
 				color="emerald"
 				external
 				extra={showMenu ? "w-full mr-3 ml-3 mt-3" : "mr-3 ml-3"}>Zum Discord-Server!</Button

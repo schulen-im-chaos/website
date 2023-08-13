@@ -15,9 +15,9 @@
 	}
 
 	let itemsPromise = null;
-	let subject = "";
-	let grade = "";
-	let search = "";
+	let subject;
+	let grade;
+	let search;
 	let mounted = false;
 
 	onMount(() => (mounted = true));
@@ -74,7 +74,7 @@
 			</ParagraphDefault>
 		{/if}
 	{:else if items === null}
-		<!-- Data is null, that's expected because the DOM hasn't loaded yet -->
+		<!-- Items is null, that's expected because the DOM hasn't loaded yet -->
 		<div class="grid grid-cols-1 lg:grid-cols-2 gap-4 w-full">
 			<Spinner color="gray" />
 		</div>

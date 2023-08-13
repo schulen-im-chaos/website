@@ -23,7 +23,7 @@
 			</p>
 			<p class="my-1">
 				{#await Promise.all([subject, grade])}
-					<i> Loading... </i>
+					<i> Lädt... </i>
 				{:then [resolvedSubject, resolvedGrade]}
 					<i>
 						{resolvedSubject.data.name_de}, {resolvedGrade.data.number == "Oberstufe"

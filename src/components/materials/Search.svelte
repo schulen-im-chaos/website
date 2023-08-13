@@ -1,6 +1,5 @@
 <script>
 	import { page } from "$app/stores";
-
 	import Input from "../basic/Input.svelte";
 	import Button from "../basic/Button.svelte";
 	import { onMount } from "svelte";
@@ -10,17 +9,20 @@
 	let search = "";
 	let grade = "";
 	let subject = "";
-
-	function getParam(key) {
-		return $page.url.searchParams.get(key) || "";
-	}
+	let mounted = false;
 
 	onMount(() => {
-		if (!system) system = getParam("system");
-		grade = getParam("grade_number");
-		subject = getParam("subject");
-		search = getParam("search");
+		mounted = true;
 	});
+
+	onMount(() => {
+		mounted = true;
+		search = $page.url.searchParams.get("search") || "";
+	});
+
+	$: if (mounted && !system) subject = $page.url.searchParams.get("system") || "";
+	$: if (mounted) grade = $page.url.searchParams.get("grade_number") || "";
+	$: if (mounted) subject = $page.url.searchParams.get("subject") || "";
 </script>
 
 <Input bind:value={search} placeholder="(noch nicht funktionell!)" required name="suche" id="suche">

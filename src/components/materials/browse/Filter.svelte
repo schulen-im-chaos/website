@@ -29,14 +29,14 @@
 			goto(
 				`/materials/browse?system=${getParam("system")}&grade_number=${selected
 					.map((obj) => obj.value)
-					.join(",")}&subject=${getParam("subject")}`,
+					.join(",")}&subject=${getParam("subject")}&search=${getParam("search")}`,
 				{ replaceState: true }
 			);
 		} else {
 			goto(
 				`/materials/browse?system=${getParam("system")}&grade_number=${getParam(
 					"grade_number"
-				)}&subject=${selected.map((obj) => obj.value).join(",")}`,
+				)}&subject=${selected.map((obj) => obj.value).join(",")}&search=${getParam("search")}`,
 				{ replaceState: true }
 			);
 		}
