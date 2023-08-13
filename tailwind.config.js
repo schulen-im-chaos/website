@@ -28,5 +28,5 @@ export default {
 
 	darkMode: "media",
 
-	plugins: []
+	plugins: [require("@tailwindcss/forms")]
 };

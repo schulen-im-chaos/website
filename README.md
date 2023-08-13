@@ -45,4 +45,4 @@ Huge thanks to everyone who takes part in the development:
 - [x] finish browse route -> filter, view, searching
 - [x] add github workflow for automatically deploying and running this website as a github page
 - [ ] fix formatter && add auto format check on gh-pages build
-- [ ] fix checkbox styling on dropdowns
+- [x] fix checkbox styling on dropdowns
