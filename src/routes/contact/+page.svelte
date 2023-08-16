@@ -54,9 +54,9 @@
 	</Alert>
 </div>
 
-<HeadingMain>Kontakt</HeadingMain>
-
 <form class="m-auto px-2 max-w-3xl" id="message-form" on:submit={handleSubmit}>
+	<HeadingMain>Kontakt</HeadingMain>
+
 	<div class="flex flex-col md:flex-row md:justify-between">
 		<div class="md:w-1/2 p-2">
 			<Label forId="name">Name</Label>
