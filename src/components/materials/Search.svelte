@@ -11,18 +11,19 @@
 	let subject = "";
 	let mounted = false;
 
-	onMount(() => {
-		mounted = true;
-	});
+	function getParam(key) {
+		return $page.url.searchParams.get(key) || "";
+	}
 
 	onMount(() => {
 		mounted = true;
-		search = $page.url.searchParams.get("search") || "";
+		search = getParam("search");
 	});
 
 	$: if (mounted && !system) system = $page.url.searchParams.get("system") || "";
 	$: if (mounted) grade = $page.url.searchParams.get("grade_number") || "";
 	$: if (mounted) subject = $page.url.searchParams.get("subject") || "";
+	$: if (mounted && (system || grade || subject)) search = getParam("search");
 </script>
 
 <Input bind:value={search} placeholder="(noch nicht funktionell!)" required name="suche" id="suche">
