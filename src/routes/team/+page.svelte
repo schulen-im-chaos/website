@@ -59,7 +59,7 @@
 </MemberRow>
 
 <MemberRow name="Nils / nwrenger / nilch" imgname="nils.png">
-	Ich bin Nils Wrenger, auch bekannt als "nilch" auf Discord und "nwrenger" auf <Link
+	Ich bin Nils, auch bekannt als "nilch" auf Discord und "nwrenger" auf <Link
 		href="https://github.com/nwrenger"
 		external>Github</Link
 	>. Ich bin Teil des Projektteams und arbeite hauptsächlich am Frontend unserer Webseite in
