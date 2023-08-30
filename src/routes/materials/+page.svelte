@@ -1,4 +1,6 @@
 <script>
+	import { page } from "$app/stores";
+	import { goto } from "$app/navigation";
 	import Link from "../../components/basic/Link.svelte";
 	import HeadingMain from "../../components/basic/HeadingMain.svelte";
 	import ParagraphDefault from "../../components/basic/ParagraphDefault.svelte";
@@ -6,7 +8,14 @@
 	import HeadingSecondary from "../../components/basic/HeadingSecondary.svelte";
 	import Dropdown from "../../components/basic/Dropdown.svelte";
 	import Search from "../../components/materials/Search.svelte";
-	let system = { name: "Niedersachsen", value: "nds" };
+
+	let availableSystems = [{ name: "Niedersachsen", value: "nds" }];
+
+	function getParam(key) {
+		return $page.url.searchParams.get(key) || "";
+	}
+
+	let system = availableSystems.find((obj) => obj.value == getParam("system"));
 </script>
 
 <svelte:head>
@@ -38,10 +47,14 @@
 <div class="flex justify-between items-center">
 	<HeadingSecondary>Übersicht</HeadingSecondary>
 	<Dropdown
-		options={[{ name: "Niedersachsen", value: "nds" }]}
+		options={availableSystems}
 		bind:selectedOption={system}
 		id={"system"}
+		label={"Niedersachsen"}
 		color={undefined}
+		fun={() => {
+			goto(`/materials?system=${system.value}`, { replaceState: true });
+		}}
 	/>
 </div>
 

@@ -82,7 +82,7 @@
 	}
 </script>
 
-<div class="relative dropdown-{id} inline-block">
+<div class="dropdown-{id} inline-block">
 	<div class="p-0.5 rounded-lg {style}">
 		<button
 			class="text-center focus:ring-4 focus:outline-none px-3 py-2 rounded-lg inline-flex items-center justify-center w-full !border-0 !rounded-md bg-white !text-gray-900 dark:bg-gray-900 dark:!text-white hover:bg-transparent hover:!text-inherit transition-all duration-75 ease-in group-hover:!bg-opacity-0 group-hover:!text-inherit"
@@ -123,7 +123,7 @@
 					</div>
 				</div>
 			{/if}
-			<ul class="p-1 overflow-y-auto min-w-[150px] max-h-[200px]" {id}>
+			<ul class="p-1 overflow-y-auto min-w-[100px] max-h-[200px]" {id}>
 				{#each options as option (option.value)}
 					<div class="p-1">
 						<li class="rounded hover:bg-gray-100 dark:hover:bg-gray-600">
