@@ -4,7 +4,7 @@
 	export let options = [{}];
 	export let selectedOption = "";
 	export let selectedOptions = [{}];
-	export let label = "Select an option";
+	export let label = "Eine Option auswählen!";
 	export let multiSelect = false;
 	export let id = "";
 	export let color;

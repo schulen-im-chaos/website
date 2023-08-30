@@ -9,13 +9,14 @@
 	import Dropdown from "../../components/basic/Dropdown.svelte";
 	import Search from "../../components/materials/Search.svelte";
 
-	let availableSystems = [{ name: "Niedersachsen", value: "nds" }];
+	let availableSystems = [
+		{ name: "Niedersachsen", value: "nds" },
+		{ name: "Brandenburg", value: "brd" }
+	];
+	let param = "";
+	param = $page.url.searchParams.get("system") || "nds";
 
-	function getParam(key) {
-		return $page.url.searchParams.get(key) || "";
-	}
-
-	let system = availableSystems.find((obj) => obj.value == getParam("system"));
+	let system = availableSystems.find((obj) => obj.value == param);
 </script>
 
 <svelte:head>
@@ -50,7 +51,6 @@
 		options={availableSystems}
 		bind:selectedOption={system}
 		id={"system"}
-		label={"Niedersachsen"}
 		color={undefined}
 		fun={() => {
 			goto(`/materials?system=${system.value}`, { replaceState: true });
