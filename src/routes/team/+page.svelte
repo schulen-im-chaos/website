@@ -63,10 +63,10 @@
 		href="https://github.com/nwrenger"
 		external>Github</Link
 	>. Ich bin Teil des Projektteams und arbeite hauptsächlich am Frontend unserer Webseite in
-	Zusammenarbeit mit meinem Kollegen Alex. Neben meiner Leidenschaft für Technik und Programmieren
-	habe ich noch andere Interessen. In meiner Freizeit spiele ich gerne meine Musikinstrumente, das
-	Saxophon und die Klarinette, und lasse meiner kreativen Seite freien Lauf. Die Kombination aus
-	musischer Ausdrucksform und technischer Herausforderung fasziniert mich.
+	Zusammenarbeit mit Alex. Meine Leidenschaft gilt hauptsächlich dem Entwickeln und Programmieren.
+	Ich stehe gerne für Hilfe bei OpenSource-Projekten zur Verfügung, da ich fest an die Vorzüge von
+	OpenSource glaube. Rust-Enthusiast. Linux-User. <br /> Abseits meiner technischen Tätigkeiten widme
+	ich mich gerne dem Spielen der Klarinette oder des Saxophons.
 </MemberRow>
 
 <MemberRow imgPosition="right" name="Linus / SiliconSniffer" imgname="linus.png">
