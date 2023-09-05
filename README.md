@@ -41,9 +41,10 @@ Huge thanks to everyone who takes part in the development:
 
 ## To Do's
 
-- [x] Add all current routes -> add dropdown button and input component
+- [x] add all current routes -> add dropdown button and input component
 - [x] finish browse route -> filter, view, searching
 - [x] add github workflow for automatically deploying and running this website as a github page
 - [x] add auto formatting on gh-pages build
 - [x] fix checkbox styling on dropdowns
 - [ ] fix formatter
+- [ ] add a materials upload page
