@@ -30,6 +30,11 @@ Bitte beachte, dass dies nur der Frontend-Code ist und einige Funktionen von uns
 
 ---
 
+## Important!
+
+Do not commit directly to the `main` branch (except for small changes that have to be deployed immediately),
+because the `main` branch is the live version of the site on Github Pages.
+
 ## Contributors
 
 Huge thanks to everyone who takes part in the development:
