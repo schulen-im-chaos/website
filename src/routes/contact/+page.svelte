@@ -20,12 +20,16 @@
 
 		try {
 			buttonDisabled = true;
-			const resp = await fetch(`${API_BASE_URL}/v1/special/sendmail`, {
+			const resp = await fetch(`${API_BASE_URL}/v2/mail/send`, {
 				method: "POST",
-				body: formData
+				body: JSON.stringify({
+					name: formData.get("name"),
+					email: formData.get("email"),
+					message: formData.get("message")
+				})
 			});
 
-			if (resp.status === 200) {
+			if (resp.status == 200) {
 				successHidden = false;
 			} else {
 				alertHidden = false;
@@ -44,12 +48,12 @@
 	<meta name="description" content="Kontaktiere unser Team hier." />
 </svelte:head>
 <div class="w-full max-w-3xl pb-4 px-2 text-sm">
-	<Alert bind:hidden={successHidden} hrefOnClose="/" color="red" id="success">
+	<Alert bind:hidden={alertHidden} hrefOnClose="/" color="red" id="success">
 		Es gab einen Fehler beim Abschicken Deiner Nachricht. Bitte probiere es später erneut oder
 		schreibe uns eine Mail an <Link href="mailto:{CONTACT_EMAIL}" external>{CONTACT_EMAIL}</Link>.
 	</Alert>
 
-	<Alert bind:hidden={alertHidden} hrefOnClose="/" color="blue" id="alert">
+	<Alert bind:hidden={successHidden} hrefOnClose="/" color="blue" id="alert">
 		Deine Nachricht wurde erfolgreich abgeschickt.
 	</Alert>
 </div>
