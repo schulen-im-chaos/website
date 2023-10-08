@@ -12,7 +12,7 @@
 
 	let itemsPromise = null;
 	onMount(() => {
-		itemsPromise = getJson(`/v1/list-all/${type == "grade" ? "grade_number" : type}`);
+		itemsPromise = getJson(`/v2/list/${type}`);
 	});
 </script>
 
@@ -32,11 +32,11 @@
 			{#each items.data as item}
 				<ButtonGradient
 					href="/materials/browse?system={system}&{type == 'grade'
-						? `grade_number=${item.number}`
-						: `subject=${item.name}`}"
-					color={item.color}
+						? `grade_number=${item.grade_number.number}`
+						: `subject=${item.id}`}"
+					color={type == "grade" ? item.grade_number.color : item.color}
 				>
-					{type == "grade" ? item.number : item.name_de}
+					{type == "grade" ? item.grade_number.number : item.name}
 				</ButtonGradient>
 			{:else}
 				<ParagraphDefault>Keine Einträge gefunden.</ParagraphDefault>

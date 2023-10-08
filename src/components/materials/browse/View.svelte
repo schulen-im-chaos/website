@@ -7,6 +7,7 @@
 	import Spinner from "../../basic/Spinner.svelte";
 	import ParagraphDefault from "../../basic/ParagraphDefault.svelte";
 	import { onMount } from "svelte";
+	import { API_BASE_URL } from "../../../globals.js";
 
 	let invalid = false;
 
@@ -32,11 +33,22 @@
 		invalid = false;
 	}
 	$: if (mounted && !invalid && (grade || subject || search)) {
-		itemsPromise = getJson(
-			`/v1/filter/item?system=${getParam(
-				"system"
-			)}&grade_number=${grade}&subject=${subject}&search=${search}`
-		);
+		(async () => {
+			const subjList = subject
+				.split(",")
+				.map(Number)
+				.filter((number) => number !== 0);
+			itemsPromise = await (
+				await fetch(`${API_BASE_URL}/v2/filter`, {
+					method: "POST",
+					body: JSON.stringify({
+						subject: subjList,
+						search: search,
+						grade: grade.split(",")
+					})
+				})
+			).json();
+		})();
 	}
 </script>
 
@@ -52,8 +64,8 @@
 					<ItemCard
 						href={item.link}
 						title={item.title}
-						subject={item.subject}
-						grade={item.grade}
+						subject={item.subject.name}
+						grade={item.grade.grade_number.number}
 						previewSrc={item.previewLink}
 					>
 						{item.summary}

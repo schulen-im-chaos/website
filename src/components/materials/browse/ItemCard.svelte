@@ -1,10 +1,5 @@
 <script>
-	import { getJson } from "$lib/api.js";
-
 	export let href, title, subject, grade, previewSrc;
-
-	subject = getJson(`/v1/get/subject?name=${subject}`);
-	grade = getJson(`/v1/get/grade?id=${grade}`);
 </script>
 
 <a
@@ -22,17 +17,9 @@
 				<slot />
 			</p>
 			<p class="my-1">
-				{#await Promise.all([subject, grade])}
-					<i> Lädt... </i>
-				{:then [resolvedSubject, resolvedGrade]}
-					<i>
-						{resolvedSubject.data.name_de}, {resolvedGrade.data.number == "Oberstufe"
-							? resolvedGrade.data.number
-							: `Klasse ${resolvedGrade.data.number}`}
-					</i>
-				{:catch error}
-					<i>Fehler: {error.data.message}</i>
-				{/await}
+				<i>
+					{subject}, {grade == "Oberstufe" ? grade : `Klasse ${grade}`}
+				</i>
 			</p>
 		</div>
 	</div>
