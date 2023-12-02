@@ -34,4 +34,5 @@
 
 <div class="grid grid-cols-2 md:grid-cols-3 xlg:grid-cols-4 justify-between gap-4 pb-4">
 	<ButtonGradient href="/materials/subject?s=mathe" color="blue">Mathe</ButtonGradient>
+	<ButtonGradient href="/materials/subject?s=physik" color="cyan">Physik</ButtonGradient>
 </div>
