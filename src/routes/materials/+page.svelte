@@ -1,22 +1,9 @@
 <script>
-	import { page } from "$app/stores";
-	import { goto } from "$app/navigation";
 	import Link from "../../components/basic/Link.svelte";
 	import HeadingMain from "../../components/basic/HeadingMain.svelte";
 	import ParagraphDefault from "../../components/basic/ParagraphDefault.svelte";
-	import Overview from "../../components/materials/Overview.svelte";
 	import HeadingSecondary from "../../components/basic/HeadingSecondary.svelte";
-	import Dropdown from "../../components/basic/Dropdown.svelte";
-	import Search from "../../components/materials/Search.svelte";
-
-	let availableSystems = [
-		{ name: "Niedersachsen", value: "nds" },
-		{ name: "Brandenburg", value: "brd" }
-	];
-	let param = "";
-	param = $page.url.searchParams.get("system") || "nds";
-
-	let system = availableSystems.find((obj) => obj.value == param);
+	import ButtonGradient from "../../components/basic/ButtonGradient.svelte";
 </script>
 
 <svelte:head>
@@ -43,23 +30,8 @@
 	<Link href="/materials/contribute">hier lang</Link>!
 </ParagraphDefault>
 
-<!-- Todo: Add Search -->
+<HeadingSecondary>Fächer</HeadingSecondary>
 
-<div class="flex justify-between items-center">
-	<HeadingSecondary>Übersicht</HeadingSecondary>
-	<Dropdown
-		options={availableSystems}
-		bind:selectedOption={system}
-		id={"system"}
-		color={undefined}
-		fun={() => {
-			goto(`/materials?system=${system.value}`, { replaceState: true });
-		}}
-	/>
+<div class="grid grid-cols-2 md:grid-cols-3 xlg:grid-cols-4 justify-between gap-4 pb-4">
+	<ButtonGradient href="/materials/subject?s=mathe" color="blue">Mathe</ButtonGradient>
 </div>
-
-<Search system={system ? system.value : ""} />
-
-<Overview system={system ? system.value : ""} type="grade" />
-
-<Overview system={system ? system.value : ""} type="subject" />
