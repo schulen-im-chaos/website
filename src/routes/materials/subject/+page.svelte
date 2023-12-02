@@ -5,6 +5,7 @@
 	import { randomColor } from "../../../lib/utils.js";
 	import Spinner from "../../../components/basic/Spinner.svelte";
 	import ButtonGradient from "../../../components/basic/ButtonGradient.svelte";
+	import ParagraphDefault from "../../../components/basic/ParagraphDefault.svelte";
 	import { GH_STORAGE_BASE_URL } from "../../../globals.js";
 	import { page } from "$app/stores";
 	import { onMount } from "svelte";
@@ -20,7 +21,13 @@
 	});
 </script>
 
-<HeadingMain>Mathe</HeadingMain>
+<HeadingMain>{subject.charAt(0).toUpperCase() + subject.slice(1)}</HeadingMain>
+
+<ParagraphDefault>
+	<b>Achtung:</b> Nachdem du auf eine der Dateien klickst, könnte es je nach deiner Internetgeschwindigkeit
+	etwas länger dauern, bis die jeweilige Datei heruntergeladen ist. Wir bitten Dich deshalb um etwas
+	Geduld.
+</ParagraphDefault>
 
 {#await itemsPromise}
 	<Spinner color="gray" />
