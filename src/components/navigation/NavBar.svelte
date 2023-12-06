@@ -66,8 +66,8 @@
 			<NavDropdown id={"about"} text="Über uns">
 				<NavItem href="/aim">Unser Ziel</NavItem>
 				<NavItem href="/team">Unser Team</NavItem>
+				<NavItem href="/contact">Kontakt</NavItem>
 			</NavDropdown>
-			<NavItem href="/contact">Kontakt</NavItem>
 			<div class="pt-1" />
 			<Button
 				href={DISCORD_LINK}
