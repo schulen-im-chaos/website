@@ -1,5 +1,11 @@
 <script>
 	import ErrorPage from "../../components/basic/ErrorPage.svelte";
+	import { page } from "$app/stores";
+	import { goto } from "$app/navigation";
+
+	if ($page.path.startsWith("/materials/subject")) {
+		goto("/materials");
+	}
 </script>
 
 <svelte:head>
