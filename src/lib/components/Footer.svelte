@@ -30,7 +30,7 @@
 					<h6 class="h6">Schulen im Chaos</h6>
 					<ul class="space-y-3">
 						<li><a class="anchor" href="/aim">Unser Ziel</a></li>
-						<li><a class="anchor" href="/tean">Unser Team</a></li>
+						<li><a class="anchor" href="/team">Unser Team</a></li>
 						<li><a class="anchor" href="/help">Wie funktioniert's?</a></li>
 						<li><a class="anchor" href="/contact">Kontakt</a></li>
 					</ul>
