@@ -1,29 +1,18 @@
-import adapter from "@sveltejs/adapter-static";
-import { vitePreprocess } from "@sveltejs/kit/vite";
-
-const dev = process.argv.includes("dev");
+import adapter from '@sveltejs/adapter-static';
+import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
+	extensions: ['.svelte'],
+	preprocess: [vitePreprocess()],
 	kit: {
 		adapter: adapter({
-			pages: "build",
-			assets: "build",
-			fallback: undefined,
-			precompress: false,
-			strict: false
-		}),
-		prerender: {
-			handleHttpError: ({ path, referrer, message }) => {
-				if (path == "/404") {
-					return;
-				}
-
-				throw new Error(message);
-			}
-		}
+			fallback: '404.html'
+		})
 	},
-	preprocess: vitePreprocess()
+	vitePlugin: {
+		inspector: true
+	}
 };
 
 export default config;

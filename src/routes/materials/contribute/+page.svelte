@@ -1,43 +1,50 @@
-<script>
-	import HeadingMain from "../../../components/basic/HeadingMain.svelte";
-	import Link from "../../../components/basic/Link.svelte";
-	import ParagraphDefault from "../../../components/basic/ParagraphDefault.svelte";
-	import { CONTACT_EMAIL } from "../../../globals";
-</script>
-
-<svelte:head>
-	<title>Lernmaterialien hinzufügen</title>
-	<meta
-		name="description"
-		content="Du möchtest dem Projekt beitragen und eigene Lernzettel anderen zur Verfügung stellen? Dann bist du hier richtig!"
-	/>
-</svelte:head>
-
-<HeadingMain>Lernmaterialien hinzufügen</HeadingMain>
-
-<ParagraphDefault>
+<a class="btn variant-filled-error" href="/materials" data-sveltekit-preload-data="hover">Zurück!</a
+>
+<h2 class="h2">Lernmaterialien hinzufügen</h2>
+<p>
 	Du möchtest dem Projekt beitragen und eigene Lernzetteln anderen zur Verfügung stellen? Perfekt!
-</ParagraphDefault>
-
-<ParagraphDefault>
+</p>
+<p>
 	In Zukunft wirst du hier direkt deine Materialien zur Überprüfung durch unser Team hochladen
-	können. Bis dahin schreibe uns bitte eine E-Mail (<Link
-		href="mailto:{CONTACT_EMAIL}?subject=Materialien%20beitragen&body=Titel%3A%0DBeschreibung%3A%0DFach%3A%0DKlassenstufe%3A%0DBundesland%3A%0DSprache%3A%20Deutsch%0D%0DAnhang%20nicht%20vergessen!"
-		>{CONTACT_EMAIL}</Link
+	können. Bis dahin schreibe uns bitte eine E-Mail (<a
+		class="anchor"
+		href="mailto:kontakt@schulenimchaos.de">kontakt@schulenimchaos.de</a
 	>), zu der du die Dateien anhängst und Folgendes angibst:
-</ParagraphDefault>
-
-<ul class="list-disc ml-6 pb-4">
-	<li>Titel</li>
-	<li>Eine kurze Beschreibung</li>
-	<li>Fach</li>
-	<li>Klassenstufe und Bundesland</li>
-	<li>Sprache (vor allem bei bilinugualen Inhalten relevant)</li>
+</p>
+<ul class="list">
+	<li>
+		<span class="badge-icon p-2 variant-soft-primary"
+			><i class="fa-solid fa-chevron-right"></i></span
+		>
+		<span class="flex-auto">Titel</span>
+	</li>
+	<li>
+		<span class="badge-icon p-2 variant-soft-primary"
+			><i class="fa-solid fa-chevron-right"></i></span
+		>
+		<span class="flex-auto">Eine kurze Beschreibung</span>
+	</li>
+	<li>
+		<span class="badge-icon p-2 variant-soft-primary"
+			><i class="fa-solid fa-chevron-right"></i></span
+		>
+		<span class="flex-auto">Fach</span>
+	</li>
+	<li>
+		<span class="badge-icon p-2 variant-soft-primary"
+			><i class="fa-solid fa-chevron-right"></i></span
+		>
+		<span class="flex-auto">Klassenstufe und Budesland</span>
+	</li>
+	<li>
+		<span class="badge-icon p-2 variant-soft-primary"
+			><i class="fa-solid fa-chevron-right"></i></span
+		>
+		<span class="flex-auto">Sprache (vorallem bei Bilingualen Inhalten relevant)</span>
+	</li>
 </ul>
-
-<ParagraphDefault>
+<p>
 	Bitte beachte, dass die Inhalte nicht copyright-geschützt sein dürfen, sie müssen also entweder
 	von dir selbst erstellt oder in public domain verfügbar sein.
-</ParagraphDefault>
-
-<ParagraphDefault>Danke für Deinen Beitrag!</ParagraphDefault>
+</p>
+<p>Danke für Deinen Beitrag!</p>

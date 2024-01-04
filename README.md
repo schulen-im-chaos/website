@@ -32,8 +32,8 @@ Bitte beachte, dass dies nur der Frontend-Code ist und einige Funktionen von uns
 
 ## Important!
 
-Do not commit directly to the `main` and `lite` branches (except for small changes that have to be deployed immediately),
-because the `main` branch is meant to be stable and the `lite` branch is currently the live version of the site on Github Pages.
+Do not commit directly to the `main` branch (except for small changes that have to be deployed immediately),
+because the `main` branch is meant to be stable and is currently the live version of the site on Github Pages.
 
 ## Contributors
 
@@ -51,5 +51,4 @@ Huge thanks to everyone who takes part in the development:
 - [x] add github workflow for automatically deploying and running this website as a github page
 - [x] add auto formatting on gh-pages build
 - [x] fix checkbox styling on dropdowns
-- [ ] fix formatter
-- [ ] add a materials upload page
+- [x] fix formatter
