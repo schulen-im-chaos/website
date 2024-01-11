@@ -1,6 +1,8 @@
 <script lang="ts">
 	import { page } from '$app/stores';
+	import { popup } from '@skeletonlabs/skeleton';
 	import type { PageData } from './$types';
+	import { comment } from 'postcss';
 
 	export let data: PageData;
 
@@ -43,7 +45,7 @@
 
 <div class="grid sm:grid-cols-2 xl:grid-cols-3 gap-6"></div>
 
-{#each Object.entries(data.resources) as [key, resources]}
+{#each Object.entries(data.resources) as [key, resources], i}
 	<h2 class="h2 !mt-2">{key}</h2>
 	<div class="grid sm:grid-cols-2 xl:grid-cols-3 gap-6">
 		{#each resources as resource}
@@ -78,11 +80,24 @@
 									></path>
 								</svg>{resource.school}
 							</div>
-							<a
-								class="btn variant-filled-primary"
-								target="_blank"
-								href="/files/{resource.grade}/{resource.subject}/{resource.file_name}">Öffnen!</a
-							>
+							{#if resource.comment}
+								<a
+									use:popup={{ event: 'hover', target: `target-${i}`, placement: 'top' }}
+									class="btn variant-filled-primary [&>*]:pointer-events-none"
+									target="_blank"
+									href="/files/{resource.grade}/{resource.subject}/{resource.file_name}">Öffnen!</a
+								>
+								<div class="card p-4 variant-filled-secondary z-[9]" data-popup="target-{i}">
+									<p>{resource.comment}</p>
+									<div class="arrow variant-filled-secondary" />
+								</div>
+							{:else}
+								<a
+									class="btn variant-filled-primary"
+									target="_blank"
+									href="/files/{resource.grade}/{resource.subject}/{resource.file_name}">Öffnen!</a
+								>
+							{/if}
 						</div>
 					</footer>
 				</div>
