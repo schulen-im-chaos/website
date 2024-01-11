@@ -48,7 +48,7 @@ export function resourcesBySubjectAndGradeMap(
 	const filteredResources: { [key: string]: Resource[] } = {};
 	query = query.toLowerCase();
 
-	db.resources.forEach((resource) => {
+	for (const resource of db.resources) {
 		if (resource.subject === subjectName) {
 			if (!query) {
 				filteredResources[resource.grade] = [
@@ -70,7 +70,7 @@ export function resourcesBySubjectAndGradeMap(
 				}
 			}
 		}
-	});
+	};
 
 	return filteredResources;
 }
