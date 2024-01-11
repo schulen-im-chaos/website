@@ -2,12 +2,12 @@
 	import '../app.postcss';
 	import '@fortawesome/fontawesome-free/css/all.css';
 	import { AppShell } from '@skeletonlabs/skeleton';
+	import Header from './Header.svelte';
+	import Footer from './Footer.svelte';
 
 	// Floating UI for Popups
 	import { computePosition, autoUpdate, flip, shift, offset, arrow } from '@floating-ui/dom';
 	import { storePopup } from '@skeletonlabs/skeleton';
-	import Footer from '$lib/components/Footer.svelte';
-	import Header from '$lib/components/Header.svelte';
 	storePopup.set({ computePosition, autoUpdate, flip, shift, offset, arrow });
 </script>
 

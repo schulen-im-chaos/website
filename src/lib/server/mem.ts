@@ -70,7 +70,7 @@ export function resourcesBySubjectAndGradeMap(
 				}
 			}
 		}
-	};
+	}
 
 	return filteredResources;
 }
