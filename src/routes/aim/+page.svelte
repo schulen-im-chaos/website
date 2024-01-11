@@ -1,3 +1,8 @@
+<svelte:head>
+	<title>Unser Ziel</title>
+	<meta name="description" content="aim" />
+</svelte:head>
+
 <h2 class="h2">Unser Ziel</h2>
 <p>
 	Das Ziel unseres Projekts "Schulen im Chaos" ist es, mithilfe von vielen Schülern von den

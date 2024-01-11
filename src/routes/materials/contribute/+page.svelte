@@ -1,3 +1,8 @@
+<svelte:head>
+	<title>Lernmaterialien hinzufügen</title>
+	<meta name="description" content="Add Materials" />
+</svelte:head>
+
 <a class="btn variant-filled-error" href="/materials" data-sveltekit-preload-data="hover">Zurück!</a
 >
 <h2 class="h2">Lernmaterialien hinzufügen</h2>

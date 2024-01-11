@@ -2,6 +2,11 @@
 	import { DiscordURL } from '$lib/links';
 </script>
 
+<svelte:head>
+	<title>Kontakt</title>
+	<meta name="description" content="Contact" />
+</svelte:head>
+
 <h2 class="h2">Kontakt</h2>
 <p>
 	Du kannst uns gerne unter <a class="anchor" href="mailto:kontakt@schulenimchaos.de"

@@ -2,6 +2,11 @@
 	import { DiscordURL } from '$lib/links';
 </script>
 
+<svelte:head>
+	<title>Schulen Im Chaos</title>
+	<meta name="description" content="Homepage" />
+</svelte:head>
+
 <h2 class="h2">Willkommen auf der Homepage von Schulen im Chaos!</h2>
 <p>
 	Schulen im Chaos ist eine Plattform, auf der Schüler sich gegenseitig unterstützen können. Dies

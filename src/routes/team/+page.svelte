@@ -1,3 +1,8 @@
+<svelte:head>
+	<title>Unser Team</title>
+	<meta name="description" content="Homepage" />
+</svelte:head>
+
 <h2 class="h2">Wer sind wir?</h2>
 <p>
 	Wir sind ein Team aus sieben Personen, welche aus den verschiedensten Teilen Deutschlands kommen.

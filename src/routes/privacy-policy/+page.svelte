@@ -1,3 +1,8 @@
+<svelte:head>
+	<title>Datenschutzerklärung</title>
+	<meta name="description" content="Homepage" />
+</svelte:head>
+
 <h2 class="h2">Datenschutzerklärung</h2>
 <h3 class="h3">1. Datenschutz auf einen Blick</h3>
 <h4 class="h4">Allgemeine Hinweise</h4>

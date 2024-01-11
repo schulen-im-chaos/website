@@ -1,3 +1,8 @@
+<svelte:head>
+	<title>Wie funktionierts?</title>
+	<meta name="description" content="Help" />
+</svelte:head>
+
 <h2 class="h2">Wie funktioniert unsere Plattform?</h2>
 <p>
 	Du verstehst nicht, wie das hier alles funktioniert? Kein Problem! Auf dieser Seite wird dir alles

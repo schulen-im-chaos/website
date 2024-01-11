@@ -14,6 +14,11 @@
 	}
 </script>
 
+<svelte:head>
+	<title>Lernmaterialien - {data.subject}</title>
+	<meta name="description" content="Materials - {data.subject}" />
+</svelte:head>
+
 <a class="btn variant-filled-error" href="/materials" data-sveltekit-preload-data="hover"
 	>Zurück zur Fächerübersicht!</a
 >

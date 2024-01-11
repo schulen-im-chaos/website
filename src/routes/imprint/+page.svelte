@@ -1,3 +1,8 @@
+<svelte:head>
+	<title>Impressum</title>
+	<meta name="description" content="Imprint" />
+</svelte:head>
+
 <h2 class="h2">Impressum</h2>
 <h3 class="h3">Inhaltlich verantwortlich:</h3>
 <p>Nico Schädlich (s.u.)</p>

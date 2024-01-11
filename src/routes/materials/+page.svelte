@@ -4,6 +4,11 @@
 	export let data: PageData;
 </script>
 
+<svelte:head>
+	<title>Lernmaterialien</title>
+	<meta name="description" content="Materials" />
+</svelte:head>
+
 <h2 class="h2">Lernmaterialien</h2>
 <p>
 	Diese Lernmaterialien wurden von anderen Schüler*innen erstellt, um Inhalte auf eine verständliche
