@@ -25,5 +25,21 @@
 <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 2xl:grid-cols-6 gap-6">
 	{#each data.subjects as subject}
 		<a class="btn variant-filled" href="/materials/kind/{subject}">{subject}</a>
+	{:else}
+		<aside class="alert variant-filled-warning !m-0">
+			<!-- Icon -->
+			<div><i class="fa-solid fa-triangle-exclamation"></i></div>
+			<!-- Message -->
+			<div class="alert-message">
+				<h3 class="h3">Noch keine Lernmaterialien!</h3>
+				<p>
+					Warte bis welche hinzugefügt werden oder füge selber <a
+						class="anchor"
+						href="/materials/contribute"
+						data-sveltekit-preload-data="hover">welche</a
+					>! hinzu!
+				</p>
+			</div>
+		</aside>
 	{/each}
 </div>
