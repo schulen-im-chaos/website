@@ -2,7 +2,6 @@
 	import { page } from '$app/stores';
 	import { popup } from '@skeletonlabs/skeleton';
 	import type { PageData } from './$types';
-	import { comment } from 'postcss';
 
 	export let data: PageData;
 
@@ -87,9 +86,9 @@
 									target="_blank"
 									href="/files/{resource.grade}/{resource.subject}/{resource.file_name}">Öffnen!</a
 								>
-								<div class="card p-4 variant-filled-secondary z-[9]" data-popup="target-{i}">
+								<div class="card p-4 variant-filled-surface z-[9]" data-popup="target-{i}">
 									<p>{resource.comment}</p>
-									<div class="arrow variant-filled-secondary" />
+									<div class="arrow variant-filled-surface" />
 								</div>
 							{:else}
 								<a
