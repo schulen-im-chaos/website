@@ -1,5 +1,5 @@
 <script>
-	import { DiscordURL } from '$lib/links';
+	import { DiscordURL } from '$lib/utils';
 	import { AppBar, popup } from '@skeletonlabs/skeleton';
 </script>
 

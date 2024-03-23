@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { DiscordURL, GithubURL, InstagramURL } from '$lib/links';
+	import { DiscordURL, GithubURL, InstagramURL } from '$lib/utils';
 
 	// eslint-disable-next-line no-undef
 	// Base Classes

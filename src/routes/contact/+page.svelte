@@ -1,5 +1,5 @@
 <script>
-	import { DiscordURL } from '$lib/links';
+	import { DiscordURL } from '$lib/utils';
 </script>
 
 <svelte:head>
