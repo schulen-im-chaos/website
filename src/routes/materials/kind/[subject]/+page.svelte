@@ -100,13 +100,6 @@
 						</div>
 					</footer>
 				</div>
-				<!-- if resource.comment == "" {
-								<a class="btn btn-primary" target="_blank" href={ templ.SafeURL("/files/" + resource.Grade + "/" + resource.Subject + "/" + resource.FileName) }>Öffnen!</a>
-							} else {
-								<div class="tooltip tooltip-left sm:tooltip-top" data-tip={ resource.Comment }>
-									<a class="btn btn-primary" target="_blank" href={ templ.SafeURL("/files/" + resource.Grade + "/" + resource.Subject + "/" + resource.FileName) }>Öffnen!</a>
-								</div>
-							} -->
 			</div>
 		{/each}
 	</div>
