@@ -1,10 +1,10 @@
 {
 	"title": "Kryptologie",
-	"summary": "Substitution (monoalphabetisch, polyalphabetisch), Transposition, XOR-Chiffre, Kasiski-Test, symmetrische und asymmetrische Verschlüsselung, Blockchiffre",
+	"summary": "Substitution (monoalphabetisch, polyalphabetisch), Transposition, Caesar, Vigenere, XOR, Kasiski-Test, symmetrische und asymmetrische Verschlüsselung, Blockchiffre, Signaturen, Zertifikate",
 	"comment": "",
 	"subject": "Informatik",
 	"grade": "Oberstufe",
 	"school": "Schillerschule Hannover",
 	"file_name": "Kryptologie.pdf",
-	"year": "2023"
+	"year": "2024"
 }
