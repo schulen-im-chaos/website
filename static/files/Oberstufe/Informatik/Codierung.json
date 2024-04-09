@@ -1,10 +1,10 @@
 {
 	"title": "Codierung",
-	"summary": "Lauflängencodierung (RLE), Huffman-Codierung, Huffmann-Baum, Kompression",
+	"summary": "Kompression (verlustfrei und verlustbehaftet), Lauflängencodierung (RLE), Huffman-Codierung, Huffmann-Baum, Fehlererkenung, Fehlerkorrektur (7-4-Hamming-Code)",
 	"comment": "",
 	"subject": "Informatik",
 	"grade": "Oberstufe",
 	"school": "Schillerschule Hannover",
 	"file_name": "Codierung.pdf",
-	"year": "2023"
+	"year": "2024"
 }
