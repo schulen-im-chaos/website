@@ -17,7 +17,7 @@
 	Deutschland
 	<br />
 	<br />
-	Mail: kontakt@schulenimchaos.de
+	Mail: nico@schulenimchaos.de
 </p>
 <h3 class="h3">Information:</h3>
 <p>

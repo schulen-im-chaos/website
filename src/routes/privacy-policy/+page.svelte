@@ -86,13 +86,13 @@
 <br />
 Nico Schädlich
 <br />
-Werner-Eisenberg-Weg 3A
+Bahnhofstraße 11
 <br />
-37213 Witzenhausen
+37242 Bad Sooden-Allendorf
 <br />
 Deutschland
 <br />
-E-Mail: kontakt@schulenimchaos.de
+E-Mail: nico@schulenimchaos.de
 <br />
 <br />
 Verantwortliche Stelle ist die natürliche oder juristische Person, die allein oder gemeinsam mit anderen
