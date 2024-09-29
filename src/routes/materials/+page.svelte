@@ -20,9 +20,18 @@
 		data-sveltekit-preload-data="hover">hier lang</a
 	>!
 </p>
-<div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 2xl:grid-cols-6 gap-6">
+<div class="grid md:grid-cols-3 2xl:grid-cols-6 gap-6">
 	{#each db.subjects as subject}
-		<a class="btn variant-filled" href="/materials/kind/{subject}">{subject}</a>
+		<a href="/materials/kind/{subject}" class="card w-fit bg-initial card-hover overflow-hidden">
+			<header>
+				<img
+					src="img/subjects/{subject}.jpg"
+					alt="{subject} Symbolbild"
+					class="bg-black/50 w-full"
+				/>
+			</header>
+			<div class="p-4 space-y-4 text-xl font-bold">{subject}</div>
+		</a>
 	{:else}
 		<aside class="alert variant-filled-warning !m-0">
 			<!-- Icon -->

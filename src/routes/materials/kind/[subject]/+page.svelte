@@ -51,7 +51,7 @@
 			<div class="card w-full bg-initial card-hover flex flex-col">
 				<div class="flex-grow">
 					<header class="p-4 space-y-4">
-						<h3 class="h3 flex justify-between break-all">
+						<h3 class="h3 flex justify-between">
 							{resource.title}
 							<div class="badge variant-filled-secondary break-keep w-12 h-8">
 								{resource.year}
