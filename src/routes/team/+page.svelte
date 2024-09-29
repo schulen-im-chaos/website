@@ -72,11 +72,12 @@
 				Ich bin Alex, im Internet auch <a
 					class="anchor"
 					target="_blank"
-					href="https://github.com/alexcoder04">"@alexcoder04"</a
-				>. Interessiere mich fürs Programmieren und arbeite deshalb an unserer Webseite.
-				Mathe/Physik/Informatik-LKs, mache auch Latein und Englisch, teile gerne mein Wissen in
-				diesen Fächern und generell zur Oberstufe; in der Freizeit mache ich gern Quatsch mit Tech
-				oder gehe raus zum Spazieren oder Radfahren. Linux-User. Großstadtkind.
+					href="https://github.com/alexcoder04">@alexcoder04</a
+				>. Im Projekt bin ich für die Webseite zuständig. Studiere Elektrotechnik, helfe daher gern
+				bei Fragen zu Mathe/Physik/Informatik und generell zu Oberstufe/Studium. In der Freizeit
+				arbeite ich gerne an (niemals endenden) Projekten mit Raspberry Pis, Arduinos, Sensoren und
+				(ganz wichtig!) LEDs, gehe raus zum Spazieren oder Radfahren und treffe Freunde. Linux-User.
+				Großstadtkind.
 			</p>
 		</div>
 	</div>

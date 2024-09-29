@@ -18,11 +18,11 @@
 	Webseite geschehen.
 </p>
 <p>
-	Bitte beachte, dass die Webseite sich derzeit noch im Aufbau befindet und eine Funktionen nicht in
-	vollem Umfang verfügbar sind. Falls bei der Nutzung Probleme auftreten sollten oder du
-	Verbesserungsvorschläge mit uns teilen möchtest, kannst du dies über die <a
+	Bitte beachte, dass die Webseite sich derzeit noch im Aufbau befindet und einige Funktionen noch
+	nicht in vollem Umfang verfügbar sind. Falls bei der Nutzung Probleme auftreten sollten oder du
+	Verbesserungsvorschläge mit uns teilen möchtest, freuen wir uns auf dein <a
 		class="anchor"
 		href="/contact"
-		data-sveltekit-preload-data="hover">Kontaktseite</a
-	> tun.
+		data-sveltekit-preload-data="hover">Feedback</a
+	>!
 </p>
