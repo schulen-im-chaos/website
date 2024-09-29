@@ -27,7 +27,7 @@
 		<span class="badge-icon p-2 variant-soft-primary"
 			><i class="fa-solid fa-chevron-right"></i></span
 		>
-		<span class="flex-auto">Eine kurze Beschreibung</span>
+		<span class="flex-auto">Eine kurze Zusammenfassung (max 15 Wörter)</span>
 	</li>
 	<li>
 		<span class="badge-icon p-2 variant-soft-primary"
@@ -39,19 +39,21 @@
 		<span class="badge-icon p-2 variant-soft-primary"
 			><i class="fa-solid fa-chevron-right"></i></span
 		>
-		<span class="flex-auto">Klassenstufe und Budesland</span>
+		<span class="flex-auto">Klassenstufe und Bundesland (optional auch Schule)</span>
 	</li>
 	<li>
 		<span class="badge-icon p-2 variant-soft-primary"
 			><i class="fa-solid fa-chevron-right"></i></span
 		>
-		<span class="flex-auto">Sprache (vorallem bei Bilingualen Inhalten relevant)</span>
+		<span class="flex-auto">Sprache (vor allem bei bilingualen Inhalten relevant)</span>
 	</li>
 	<li>
 		<span class="badge-icon p-2 variant-soft-primary"
 			><i class="fa-solid fa-chevron-right"></i></span
 		>
-		<span class="flex-auto">Die Datei selbst im PDF-Format (zur Not geht auch JPG/PNG, aber bitte kein Word)</span>
+		<span class="flex-auto"
+			>Die Datei selbst im PDF-Format (zur Not geht auch JPG/PNG, aber bitte kein Word)</span
+		>
 	</li>
 </ul>
 <p>
