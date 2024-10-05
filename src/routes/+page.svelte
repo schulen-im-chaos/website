@@ -14,9 +14,9 @@
 <h3 class="h3">Newsletter</h3>
 
 <p>
-	<a class="anchor" href="https://forms.office.com/r/iRAR5mKAuD">Abonniere</a> unseren Newsletter, um
-	auf dem Laufenden zu bleiben und Infos zu erhalten, wenn neue Materialien hochgeladen oder neue Funktionen
-	hinzugefügt werden.
+	<a class="anchor" href="https://forms.office.com/r/iRAR5mKAuD" target="_blank">Abonniere</a> unseren
+	Newsletter, um auf dem Laufenden zu bleiben und Infos zu erhalten, wenn neue Materialien hochgeladen
+	oder neue Funktionen hinzugefügt werden.
 </p>
 
 <hr />
