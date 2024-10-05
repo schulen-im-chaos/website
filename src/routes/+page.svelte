@@ -9,11 +9,17 @@
 
 <h2 class="h2">Willkommen auf der Homepage von Schulen im Chaos!</h2>
 
-<h3 class="h3>Newsletter</h3>
+<hr />
+
+<h3 class="h3">Newsletter</h3>
 
 <p>
-	<a href="https://forms.office.com/r/iRAR5mKAuD">Abonniere</a> unseren Newsletter, um auf dem Laufenden zu bleiben und Infos zu erhalten, wenn neue Materialien hochgeladen oder neue Funktionen hinzugefügt werden.
+	<a href="https://forms.office.com/r/iRAR5mKAuD">Abonniere</a> unseren Newsletter, um auf dem Laufenden
+	zu bleiben und Infos zu erhalten, wenn neue Materialien hochgeladen oder neue Funktionen hinzugefügt
+	werden.
 </p>
+
+<hr />
 
 <p>
 	Schulen im Chaos ist eine Plattform, auf der Schüler sich gegenseitig unterstützen können. Dies
