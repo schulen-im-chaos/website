@@ -50,20 +50,6 @@
 	</div>
 	<div class="card w-fit bg-initial card-hover overflow-hidden">
 		<header>
-			<img src="img/team/nopicture.png" alt="Phillip" class="bg-black/50 w-full" />
-		</header>
-		<div class="p-4 space-y-4">
-			<h2 class="h2">Philipp / Klumpi</h2>
-			<p>
-				Ich bin Philipp, oder auch Klumpi. Ich bin durch Nico von Anfang an in das Projekt
-				eingebunden worden und kümmere mich dabei hauptsächlich um den Discord Server und alles was
-				damit zu tun hat. Ansonsten spiele ich Fußball, zocke für mein Leben gern, fahre Motorrad
-				und bin in der Feuerwehr.
-			</p>
-		</div>
-	</div>
-	<div class="card w-fit bg-initial card-hover overflow-hidden">
-		<header>
 			<img src="img/team/alex.png" alt="Alex" class="bg-black/50 w-full" />
 		</header>
 		<div class="p-4 space-y-4">
@@ -114,25 +100,6 @@
 				Projekt eingeladen, wobei ich vor allem Alex zu Seite stehe. Ich beschäftige mich viel mit
 				allem rund um IT, Computer und Linux. Ansonsten liebe ich es, mit meiner Kamera unterwegs zu
 				sein und mich draußen aufzuhalten.
-			</p>
-		</div>
-	</div>
-	<div class="card w-fit bg-initial card-hover overflow-hidden">
-		<header>
-			<img src="img/team/lukas.png" alt="Lukas" class="bg-black/50 w-full" />
-		</header>
-		<div class="p-4 space-y-4">
-			<h2 class="h2">Lukas / RED_Fox703</h2>
-			<p>
-				Mein Name ist Lukas. Auf Social Media aber eher unter dem Namen Red_Fox703 zu finden. Ich
-				bin ein Leidenschaftlicher Gearhead und ein absoluter IT-Nerd. Ich bin sehr direkt und auch
-				in vielen Sachen sehr offen über Dinge, wie zb. Meine Orientierung zu sprechen. Ich mache
-				Social Media (bin auf Instagram inzwischen recht groß geworden), halte mich aber aus den
-				Social-Media-Kanälen von Schulen im Chaos raus. Ich hoste Teile der IT-Infrastruktur (wenn
-				was schiefläuft, liegt's sehr wahrscheinlich an mir) Hier sieht man auch noch ein paar
-				meiner Hobby Projekte: <a class="anchor" target="_blank" href="http://social.redfox703.de/"
-					>[Klich Mich]</a
-				>.
 			</p>
 		</div>
 	</div>
