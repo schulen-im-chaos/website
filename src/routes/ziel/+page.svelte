@@ -1,6 +1,6 @@
 <svelte:head>
 	<title>Unser Ziel</title>
-	<meta name="description" content="aim" />
+	<meta name="description" content="Ziel des Projekts" />
 </svelte:head>
 
 <h2 class="h2">Unser Ziel</h2>

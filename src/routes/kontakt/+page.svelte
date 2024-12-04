@@ -4,7 +4,7 @@
 
 <svelte:head>
 	<title>Kontakt</title>
-	<meta name="description" content="Contact" />
+	<meta name="description" content="So kannst du uns kontaktieren." />
 </svelte:head>
 
 <h2 class="h2">Kontakt</h2>

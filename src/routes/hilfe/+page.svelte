@@ -1,6 +1,9 @@
 <svelte:head>
 	<title>Wie funktionierts?</title>
-	<meta name="description" content="Help" />
+	<meta
+		name="description"
+		content="Wie funktioniert unsere Plattform? Das wird auf dieser Webseite erläutert."
+	/>
 </svelte:head>
 
 <h2 class="h2">Wie funktioniert unsere Plattform?</h2>
@@ -16,7 +19,7 @@
 
 <p>
 	Wir haben selbst ähnliche Erfahrungen in der Schule gemacht und haben deshalb diese Webseite ins
-	Leben gerufen. Um auf der Webseite zu suchen, wähle zuerst oben den <a href="/materials"
+	Leben gerufen. Um auf der Webseite zu suchen, wähle zuerst oben den <a href="/materialien"
 		>Tab "Lernmaterialen"</a
 	> aus. Dort wählst du das gewünschte Fach, wie z. B. Mathe, aus, und gibst dann einen Suchbegriff,
 	z. B. "Funktionen" ein. In Zukunft wirst du die Ergebnise auch nach Kriterien wie Klasse, Schule, Bundesland

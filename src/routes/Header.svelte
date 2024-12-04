@@ -13,14 +13,14 @@
 	<svelte:fragment slot="trail">
 		<a
 			class="btn hover:variant-soft-primary hidden lg:inline"
-			href="/help"
+			href="/hilfe"
 			data-sveltekit-preload-data="hover"
 		>
 			Wie funktioniert's?
 		</a>
 		<a
 			class="btn hover:variant-soft-primary hidden lg:inline"
-			href="/materials"
+			href="/materialien"
 			data-sveltekit-preload-data="hover"
 		>
 			Lernmaterialien
@@ -38,7 +38,7 @@
 			<nav class="list-nav">
 				<ul>
 					<li>
-						<a href="/aim" data-sveltekit-preload-data="hover">
+						<a href="/ziel" data-sveltekit-preload-data="hover">
 							<span class="w-6 text-center"><i class="fa-solid fa-flag-checkered"></i></span>
 							<span>Unser Ziel</span>
 						</a>
@@ -50,7 +50,7 @@
 						</a>
 					</li>
 					<li>
-						<a href="/contact" data-sveltekit-preload-data="hover">
+						<a href="/kontakt" data-sveltekit-preload-data="hover">
 							<span class="w-6 text-center"><i class="fa-solid fa-id-card"></i></span>
 							<span>Kontakt</span>
 						</a>
@@ -68,20 +68,20 @@
 			<nav class="list-nav">
 				<ul>
 					<li>
-						<a href="/help" data-sveltekit-preload-data="hover">
+						<a href="/hilfe" data-sveltekit-preload-data="hover">
 							<span class="w-6 text-center"><i class="fa-solid fa-circle-info"></i></span>
 							<span>Wie funktioniert's?</span>
 						</a>
 					</li>
 					<li>
-						<a href="/materials" data-sveltekit-preload-data="hover">
+						<a href="/materialien" data-sveltekit-preload-data="hover">
 							<span class="w-6 text-center"><i class="fa-solid fa-file"></i></span>
 							<span>Lernmaterialien</span>
 						</a>
 					</li>
 					<hr class="!my-4" />
 					<li>
-						<a href="/aim" data-sveltekit-preload-data="hover">
+						<a href="/ziel" data-sveltekit-preload-data="hover">
 							<span class="w-6 text-center"><i class="fa-solid fa-flag-checkered"></i></span>
 							<span>Unser Ziel</span>
 						</a>
@@ -93,7 +93,7 @@
 						</a>
 					</li>
 					<li>
-						<a href="/contact" data-sveltekit-preload-data="hover">
+						<a href="/kontakt" data-sveltekit-preload-data="hover">
 							<span class="w-6 text-center"><i class="fa-solid fa-id-card"></i></span>
 							<span>Kontakt</span>
 						</a>

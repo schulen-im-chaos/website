@@ -29,10 +29,10 @@
 				<div class="hidden md:grid space-y-6" data-sveltekit-preload-data="hover">
 					<h6 class="h6">Schulen im Chaos</h6>
 					<ul class="space-y-3">
-						<li><a class="anchor" href="/aim">Unser Ziel</a></li>
+						<li><a class="anchor" href="/ziel">Unser Ziel</a></li>
 						<li><a class="anchor" href="/team">Unser Team</a></li>
-						<li><a class="anchor" href="/help">Wie funktioniert's?</a></li>
-						<li><a class="anchor" href="/contact">Kontakt</a></li>
+						<li><a class="anchor" href="/hilfe">Wie funktioniert's?</a></li>
+						<li><a class="anchor" href="/kontakt">Kontakt</a></li>
 					</ul>
 				</div>
 				<div class="space-y-6 mb-4">
@@ -56,8 +56,8 @@
 				<div class="space-y-6">
 					<h6 class="h6">Informationen</h6>
 					<ul class="space-y-3" data-sveltekit-preload-data="hover">
-						<li><a class="anchor" href="/imprint">Impressum</a></li>
-						<li><a class="anchor" href="/privacy-policy">Datenschutzerklärung</a></li>
+						<li><a class="anchor" href="/impressum">Impressum</a></li>
+						<li><a class="anchor" href="/datenschutz">Datenschutzerklärung</a></li>
 					</ul>
 				</div>
 			</div>

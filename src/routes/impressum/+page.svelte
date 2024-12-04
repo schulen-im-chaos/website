@@ -1,6 +1,6 @@
 <svelte:head>
 	<title>Impressum</title>
-	<meta name="description" content="Imprint" />
+	<meta name="description" content="Impressum" />
 </svelte:head>
 
 <h2 class="h2">Impressum</h2>

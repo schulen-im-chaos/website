@@ -6,11 +6,11 @@ _English_
 
 This is the code for the website of the [Schulen im Chaos](https://schulenimchaos.de/) project.
 
-The website is only in German (at least for now), you can read about our aim [here](https://schulenimchaos.de/aim).
+The website is only in German (at least for now), you can read about our aim [here](https://schulenimchaos.de/ziel).
 
 This GitHub page is aimed only for developers, those who are interested in the source code of the website,
 want to submit technical information about bugs in the issues or contribute code via a pull request.
-If you want to contact us for other reasons, please do that using the [contact form](https://schulenimchaos.de/contact) on our website.
+If you want to contact us for other reasons, please do that using the [contact form](https://schulenimchaos.de/kontakt) on our website.
 
 Please note that this is only the front-end code and some functionality is provided by our backend and database which are currently closed-sourced.
 
@@ -20,11 +20,11 @@ _Deutsch_
 
 Dies ist der Code für die Webseite von [Schulen im Chaos](https://schulenimchaos.de/).
 
-Du kannst dich [hier](https://schulenimchaos.de/aim) über unsere Ziele informieren.
+Du kannst dich [hier](https://schulenimchaos.de/ziel) über unsere Ziele informieren.
 
 Das GitHub Repository ist gedacht nur für die Entwickler, Leute, die am Quellcode unserer Webseite interessiert sind,
 technische Informationen über Bugs in den Issues teilen oder den Projekt über einen Pull Request beitragen wollen.
-Wenn Du uns aus anderen Gründen kontaktieren möchtest, nutze bitte dazu das [Kontaktformular](https://schulenimchaos.de/contact) auf unserer Webseite.
+Wenn Du uns aus anderen Gründen kontaktieren möchtest, nutze bitte dazu das [Kontaktformular](https://schulenimchaos.de/kontakt) auf unserer Webseite.
 
 Bitte beachte, dass dies nur der Frontend-Code ist und einige Funktionen von unserem Backend und Datenbank bereitgestellt werden, die aktuell closed-source sind.
 

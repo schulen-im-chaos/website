@@ -27,8 +27,8 @@
 		>Discord Server</a
 	>
 	als auch durch das Teilen der
-	<a class="anchor" href="/materials" data-sveltekit-preload-data="hover">Lernmaterialien</a> über die
-	Webseite geschehen.
+	<a class="anchor" href="/materialien" data-sveltekit-preload-data="hover">Lernmaterialien</a> über
+	die Webseite geschehen.
 </p>
 
 <p>
@@ -36,7 +36,7 @@
 	nicht in vollem Umfang verfügbar sind. Falls bei der Nutzung Probleme auftreten sollten oder du
 	Verbesserungsvorschläge mit uns teilen möchtest, freuen wir uns auf dein <a
 		class="anchor"
-		href="/contact"
+		href="/kontakt"
 		data-sveltekit-preload-data="hover">Feedback</a
 	>!
 </p>

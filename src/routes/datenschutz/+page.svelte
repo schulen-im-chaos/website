@@ -1,6 +1,6 @@
 <svelte:head>
 	<title>Datenschutzerklärung</title>
-	<meta name="description" content="Homepage" />
+	<meta name="description" content="Datenschutzerklärung" />
 </svelte:head>
 
 <h2 class="h2">Datenschutzerklärung</h2>

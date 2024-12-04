@@ -4,7 +4,7 @@
 
 <svelte:head>
 	<title>Lernmaterialien</title>
-	<meta name="description" content="Materials" />
+	<meta name="description" content="Lernmatierialien" />
 </svelte:head>
 
 <h2 class="h2">Lernmaterialien</h2>
@@ -16,13 +16,13 @@
 <p>
 	Hast Du eigene Lernzettel, die du mit anderen teilen willst? Dann geht's <a
 		class="anchor"
-		href="/materials/contribute"
+		href="/materialien/beitragen"
 		data-sveltekit-preload-data="hover">hier lang</a
 	>!
 </p>
 <div class="grid md:grid-cols-3 2xl:grid-cols-6 gap-6">
 	{#each db.subjects as subject}
-		<a href="/materials/kind/{subject}" class="card w-fit bg-initial card-hover overflow-hidden">
+		<a href="/materialien/kind/{subject}" class="card w-fit bg-initial card-hover overflow-hidden">
 			<header>
 				<img
 					src="img/subjects/{subject}.jpg"
@@ -42,7 +42,7 @@
 				<p>
 					Warte bis welche hinzugefügt werden oder füge selber <a
 						class="anchor"
-						href="/materials/contribute"
+						href="/materialien/beitragen"
 						data-sveltekit-preload-data="hover">welche</a
 					>! hinzu!
 				</p>
