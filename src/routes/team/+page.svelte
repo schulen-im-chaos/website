@@ -5,7 +5,7 @@
 
 <h2 class="h2">Wer sind wir?</h2>
 <p>
-	Wir sind ein Team aus sieben Personen, welche aus den verschiedensten Teilen Deutschlands kommen.
+	Wir sind ein Team aus fünf Personen, welche aus den verschiedensten Teilen Deutschlands kommen.
 </p>
 <p>Hier stellen wir uns kurz vor:</p>
 <div class="grid md:grid-cols-2 2xl:grid-cols-3 gap-6">
