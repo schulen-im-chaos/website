@@ -1,4 +1,4 @@
-import type { Database, Resource } from './init';
+import type { Resource } from './init';
 
 // links
 export const DiscordURL = 'https://discord.com/invite/nWd8yZ4HWY';
@@ -6,36 +6,22 @@ export const InstagramURL = 'https://www.instagram.com/schulenimchaos/';
 export const GithubURL = 'https://github.com/schulen-im-chaos';
 
 // helper sorting function
-export function resourcesBySubjectAndGradeMap(
-	db: Database,
-	subjectName: string,
+export function filterResources(
+	resources: Resource[],
 	query: string
-): { [key: string]: Resource[] } {
-	const filteredResources: { [key: string]: Resource[] } = {};
+): Resource[] {
+	const filteredResources: Resource[] = [];
 	query = query.toLowerCase();
 
-	for (const resource of db.resources) {
-		if (resource.subject === subjectName) {
-			if (!query) {
-				filteredResources[resource.grade] = [
-					...(filteredResources[resource.grade] || []),
-					resource
-				];
-			} else {
+	for (const resource of resources) {
 				if (
-					resource.grade.toLowerCase().includes(query) ||
 					resource.title.toLowerCase().includes(query) ||
 					resource.school.toLowerCase().includes(query) ||
 					resource.year.toLowerCase().includes(query) ||
 					resource.summary.toLowerCase().includes(query)
 				) {
-					filteredResources[resource.grade] = [
-						...(filteredResources[resource.grade] || []),
-						resource
-					];
+					filteredResources.push(resource);
 				}
-			}
-		}
 	}
 
 	return filteredResources;

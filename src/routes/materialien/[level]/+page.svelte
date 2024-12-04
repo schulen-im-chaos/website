@@ -1,28 +1,34 @@
 <script lang="ts">
-	import Notice from './Notice.svelte';
 	import db from '$lib/data.json';
+	import Notice from '../Notice.svelte';
+	import type { PageData } from './$types';
+
+	export let data: PageData;
 </script>
 
 <svelte:head>
-	<title>Lernmaterialien</title>
-	<meta name="description" content="Lernmatierialien" />
+	<title>Lernmaterialien - {data.level}</title>
+	<meta name="description" content="Lernmatierialien für die gymnasiale Oberstufe" />
 </svelte:head>
 
-<h2 class="h2">Lernmaterialien</h2>
+<h2 class="h2">Lernmaterialien - {data.level}</h2>
 
 <Notice />
 
 <div class="grid md:grid-cols-3 2xl:grid-cols-6 gap-6">
-	{#each db.levels as level}
-		<a href="/materialien/{level.name}" class="card w-fit bg-initial card-hover overflow-hidden">
+	{#each data.subjects as subject}
+		<a
+			href="/materialien/{data.level}/{subject}"
+			class="card w-fit bg-initial card-hover overflow-hidden"
+		>
 			<header>
 				<img
-					src="/img/levels/{level.name}.jpg"
-					alt="{level.name} Symbolbild"
+					src="/img/subjects/{subject}.jpg"
+					alt="{subject} Symbolbild"
 					class="bg-black/50 w-full"
 				/>
 			</header>
-			<div class="p-4 space-y-4 text-xl font-bold">{level.name}</div>
+			<div class="p-4 space-y-4 text-xl font-bold">{subject}</div>
 		</a>
 	{:else}
 		<aside class="alert variant-filled-warning !m-0">

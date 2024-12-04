@@ -1,45 +1,61 @@
 import fs from 'fs';
 import path from 'path';
 
+const BASE_FILES_DIR = 'static/files';
+
 export interface Resource {
 	title: string;
 	summary: string;
 	comment: string;
 	subject: string;
-	grade: string;
 	school: string;
 	file_name: string;
 	year: string;
 }
 
+export interface Subject {
+	name: string;
+	resources : Resource[];
+}
+
+export interface Level {
+	name: string;
+	subjects: Subject[];
+}
+
 export interface Database {
-	subjects: string[];
-	resources: Resource[];
+	levels: Level[];
 }
 
-const db: Database = { subjects: [], resources: [] };
+const db: Database = { levels: [] };
 
-function importFiles(directoryPath: string) {
-	const items = fs.readdirSync(directoryPath, { withFileTypes: true });
+const levels = fs.readdirSync(BASE_FILES_DIR, { withFileTypes: true });
 
-	items.forEach((item) => {
-		const fullPath = path.join(directoryPath, item.name);
-		if (item.isDirectory()) {
-			importFiles(fullPath);
-		} else if (path.extname(item.name) === '.json') {
-			const fileData = fs.readFileSync(fullPath, 'utf8');
-			const resource: Resource = JSON.parse(fileData);
+levels.forEach((level) => {
+	if (level.isDirectory()) {
+		const levelObj: Level = { name: level.name, subjects: [] };
+		const subjects = fs.readdirSync(path.join(BASE_FILES_DIR, level.name), { withFileTypes: true })
 
-			if (!db.subjects.includes(resource.subject)) {
-				db.subjects.push(resource.subject);
+		subjects.forEach((subject) => {
+			if (subject.isDirectory()) {
+				const subjectObj: Subject = { name: subject.name, resources: [] };
+				const items = fs.readdirSync(path.join(BASE_FILES_DIR, level.name, subject.name), { withFileTypes: true });
+
+				items.forEach((item) => {
+					if (path.extname(item.name) === '.json'){
+						const fileData = fs.readFileSync(path.join(BASE_FILES_DIR, level.name, subject.name, item.name), 'utf8');
+						const resource: Resource = JSON.parse(fileData);
+						subjectObj.resources.push(resource);
+					}
+				});
+
+				levelObj.subjects.push(subjectObj);
 			}
+		});
 
-			db.resources.push(resource);
-		}
-	});
-}
-
-importFiles('static/files');
+		db.levels.push(levelObj)
+	}
+});
 
 fs.writeFile('src/lib/data.json', JSON.stringify(db), (err) => {
 	if (err) throw err;
