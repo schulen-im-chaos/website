@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  build_site:
+  build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -34,7 +34,7 @@ jobs:
           path: 'build/'
 
   deploy:
-    needs: build_site
+    needs: build
     runs-on: ubuntu-latest
 
     permissions:
@@ -48,4 +48,4 @@ jobs:
     steps:
       - name: Deploy
         id: deployment
-        uses: actions/deploy-pages@v1
+        uses: actions/deploy-pages@v4
